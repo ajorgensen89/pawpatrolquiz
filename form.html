@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!--links to google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Raleway%7CRighteous" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Luckiest+Guy&family=Sen&display=swap"
+        rel="stylesheet">
+    <!--link to external html files-->
+    <link rel="view hishscore page" href="highscore.html">
+    <link rel="home page" href="index.html">
+    <link rel="quiz page" href="quiz.html">
+    <link rel="final page" href="end.html">
+    <!--links for favicon icon-->
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Paw Patrol Kids Quiz</title>
+</head>
+
+<body>
+    <!--link to form.html external file to submit suggestions-->
+    <div>
+        <!--Submission form to include username, parents email and suggestion box-->
+        <form method="GET" action="back-form.html">
+            <p>
+                <h4>Any Suggestions...?</h4>
+                <p>Hope you had fun playing this quiz about Paw Patrol!</p>
+
+                <textarea id="myText">
+                    <p>
+                        <label value="username" for="username">Username:</label>
+                        <input type="text" placeholder="username" id="username">
+                    </p>
+                    <p>
+                        <label value="parents email" for="email">Email:</label>
+                        <input type="email" placeholder="parents email" id="email">
+                    </p>
+                    <p>
+                        <label value="suggestion-box" for="suggestion">Suggestion:</label>
+                        <input type="text" placeholder="Put your suggestion here" id="suggestion">
+                    </p>
+                </textarea>
+                <button type="submit" onclick="sendMail(); return false">Send</button>
+
+                <div>
+                    <a href="back-form.html">
+                        <button type="submit" class="button-normal button-hover">
+                            <h2>Let's Go!</h2>
+                        </button>
+                    </a>
+                </div>
+
+        </form>
+    </div>
+
+    <!--script links to font awesome and javascript-->
+    <script src="assets/js/script.js"></script>
+    <script src="https://kit.fontawesome.com/f26ba66020.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
