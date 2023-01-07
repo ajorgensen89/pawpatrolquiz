@@ -127,13 +127,13 @@ startGame();
 //     sessionStorage.setItem("name", nameStored);
 //     console.log("username log")
 // }
-/**Send email function */
+/**Send email function from StackOverflow - see in 'README.md' credits.*/
 function sendMail() {
     var link = "ajorgensen89@gmail.com"
              + "?cc=ajorgensen89@gmail.com"
              + "&subject=" + encodeURIComponent("Paw Patrol Quiz")
-             + "&body=" + encodeURIComponent(document.getElementById('myText').value)
+             + "&body=" + encodeURIComponent(document.querySelector('#my-text').textContent).value;
     ;
-    
-    window.location.href = "form.html";
+    return window.location.assign("back-form.html");
+    // window.location.href = "back-form.html";
 }
