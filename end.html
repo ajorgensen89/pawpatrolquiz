@@ -34,14 +34,28 @@
     <div>
         <h1>Well Done!</h1>
         <p>You Scored:
-            <span>0</span>
+            <span id="end-score">0</span>
         </p>
+        <div>
+            <form>
+                <!--icon?-->
+                <p><label for="username"> Create a username to save your highscores!</label></p>
+                <input placeholder="create username" type="text" name="name" class="username-hover" id="username">
+                <a href="rules.html">
+                    <div>
+                    <button type="submit" onclick="saveHighScore(event)" class="button-normal button-hover">
+                        <h2>Save highscore!</h2>
+                    </button>
+                </div>
+                </a>
+            </form>
+        </div>
         <div>
             <a href="highscore.html">
                 <button class="button-normal button-hover">
                     <!--link to quiz.html external file-->
 
-                    <h3>View Highscores</h3>
+                    <h3>View all highscores!</h3>
 
                 </button>
             </a>
@@ -54,11 +68,6 @@
                 </button>
             </a>
         </div>
-        <div></div>
-    </div>
-
-    <div>
-        <a></a>
     </div>
     <!--javascript link-->
     <script src="assets/js/script.js"></script>
