@@ -1,19 +1,21 @@
 console.log("Fudge");
+
 /** Fixed score and question total value */
 const MAX_SCORE = 1;
 const MAX_QUESTIONS = 5;
+
 /**Query selector used to targert either class/id */
 let question = document.querySelector("#question");
 let choices = Array.from(document.querySelectorAll(".choice-box"));
 let progressName = document.querySelector("#progress-name");
 let scoreTotal = document.querySelector('#score');
 
+/** variable created to iterate through quiz array of numberOfQuestions */
 let actualQuestion = {};
 let checkAnswer = true;
 let score = 0;
 let questionCount = 0;
 let otherQuestions = [];
-
 
 let numberOfQuestions = [{
         question: "What is naughty Majors name in Paw Patrol who causes problems for the Paw Patrol gang?",
@@ -70,18 +72,17 @@ startGame = () => {
 /**To get new question function*/
 getNextQuestion = () => {
     if (otherQuestions.length === 0 || questionCount >= MAX_QUESTIONS) {
-        /**Track score */
+        /**Track score. Add +1 to score for each correct answer*/
         localStorage.setItem("previousScore", score);
         /**Go to this html page */
-        console.log("get next qu");
-        return window.location.assign("end.html");
-        
+        console.log("get next qu"); 
+        return window.location.assign("quiz.html");
     }
-    
+
     questionCount++;
     progressName.textContent = `Question ${questionCount} of ${MAX_QUESTIONS}`;
     console.log("questionCount area");
-/**Track the question the user is currently on and create quesion index*/
+    /**Track the question the user is currently on and create quesion index*/
     let questionId = Math.floor(Math.random() * otherQuestions.length);
     actualQuestion = otherQuestions[questionId];
     question.textContent = actualQuestion.question;
@@ -99,90 +100,82 @@ getNextQuestion = () => {
 choices.forEach(choice => {
     choice.addEventListener("click", e => {
         if (!checkAnswer) return
-
+/**check user answer acgainst javascript answer */
         checkAnswer = false;
         let selectedChoice = e.target;
         let selectedAnswer = selectedChoice.dataset["number"];
         let classToApply = selectedAnswer == actualQuestion.answers ? "correct" : "incorrect";
-
+        /**Score is incremented */
         if (classToApply === 'correct') {
             incrementScore(MAX_SCORE);
             console.log("correct/incorrect zone");
         }
         selectedChoice.parentElement.classList.add(classToApply);
-
+/**Time to show the correct selection and then iterate next question*/
         setTimeout(() => {
             selectedChoice.parentElement.classList.remove(classToApply);
             getNextQuestion();
             console.log("time out");
         }, 1000)
     })
+   
 })
-
-incrementScore = num => {
-    score +=num;
+ /**increases score of quiz when correct answer is selected */
+ incrementScore = num => {
+    score += num;
     scoreTotal.textContent = score;
     console.log("increase score durring quiz");
 }
 
 startGame();
 
-
-// function submission(event) {
-//     event.preventDefault();
-//     let nameStored = document.forms["id"]["name"].value;
-//     sessionStorage.setItem("name", nameStored);
-//     console.log("username log")
+// incrementScore = num => {
+//     score += num;
+//     endScore.textContent = score;
+//     console.log("final score");
 // }
-/**Send email function from StackOverflow - see in 'README.md' credits.*/
-function sendMail() {
-    var link = "ajorgensen89@gmail.com"
-             + "?cc=ajorgensen89@gmail.com"
-             + "&subject=" + encodeURIComponent("Paw Patrol Quiz")
-             + "&body=" + encodeURIComponent(document.querySelector('#my-text').textContent).value;
-    ;
-    return window.location.assign("back-form.html");
-    // window.location.href = "back-form.html";
-}
 
 let username = document.querySelector("#username");
 let endScoreButton = document.querySelector("#end-score-button");
 let endScore = document.querySelector("#end-score");
 let previousScore = localStorage.getItem("previousScore");
 
-let highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+
+// let highScores = JSON.parse(localStorage.getItem("#end-score")) || [];
 
 const MAX_HIGH_SCORES = 5;
+/**update score for viewing in Your score: */
 endScore.textContent = previousScore;
-username.addEventListener("keyup", () => {
-    endScoreButton.disabled = !username.value;
-    console.log("1");
 
-});
-saveHighScore = e => {
-    e.preventDefault();
+// username.addEventListener("keyup", () => {
+//     endScoreButton.disabled = !username.value;
+//     console.log("1");
 
-    let score = {
-        score: previousScore,
-        name: username.value
-        
-    };
-    console.log("2");
-    highScores.push(score);
+// });
+// saveHighScore = e => {
+//     e.preventDefault();
 
-    highScores.sort((a, b) => {
-        return b.score - a.score
-    });
-    highScores.splice(5);
-    console.log("3");
-    localStorage.setItem("highScores", JSON.stringify(highScores));
-    window.location.assign("highscore.html");
-    console.log("4");
-}
+//     let score = {
+//         score: previousScore,
+//         name: username.value
 
-let highScoresList = dpcument.querySelector("#highScoresList");
-let highScore = JSON.parse(localStorage.getItem("highscores")) || [];
+//     };
+//     console.log("2");
+//     highScores.push(score);
 
-highScoresList.textContent = highScore.map(score => {
-    return `<li>${score.name} : ${score.score}</li>`
-}).join("");
+//     highScores.sort((a, b) => {
+//         return b.score - a.score
+//     });
+//     highScores.splice(5);
+//     console.log("3");
+//     localStorage.setItem("highScores", JSON.stringify(highScores));
+//     window.location.assign("quiz.html");
+//     console.log("4");
+// }
+
+// let highScoresList = dpcument.querySelector("#highScoresList");
+// let highScore = JSON.parse(localStorage.getItem("highscores")) || [];
+
+// highScoresList.textContent = highScore.map(score => {
+//     return `<li>${score.name} : ${score.score}</li>`
+// }).join("");

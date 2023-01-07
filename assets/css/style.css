@@ -2,6 +2,9 @@ body {
     font-family: 'Gloria Hallelujah', 'sans serif';
     text-align: center;
 }
+p {
+    margin: 30px 0;
+}
 i {
     color: black;
     float: left;
@@ -19,14 +22,14 @@ a {
     text-align: center;
 }
 /*username before hover*/
-.username-hover {
+.newbie {
 padding: 1rem;
 border: none;
 border-bottom: 1px solid black;
 }
 
 /*username after hover*/
-.username-hover:hover {
+.newbie:hover {
     cursor: pointer;
     transition: transform 150ms;
     transform: scale(1.1);
@@ -43,18 +46,35 @@ input::placeholder {
     border: 2px solid black;
     border-radius: 50px;
     text-align: center;
-    margin: 1rem 0 0 0;
+    margin: 50px 0;
+    padding: 10px;
+    
 }
 /*Create username button after hover*/
 .button-hover:hover {
     color: rgb(165, 9, 231);
     text-align: center;
     border: 4px solid rgb(165, 9, 231);
+    padding: 10px;
+    margin: 50px 0;
 }
 .correct {
     background-color: rgb(10, 164, 61);
+   
 }
-
+.correct-image {
+    background-color: brown;
+    background-image: image(url'./images/quiz-images/yesPupCP.png');
+    width: 50px;
+    height: 50px;
+}
 .incorrect {
     background-color: rgb(197, 6, 41);
+    background-image: image(url'./images/quiz-images/yesPupCP.png');
+}
+.incorrect-image {
+    background-color: brown;
+    background-image: image(url'./images/quiz-images/NoPupCP.png');
+    width: 50px;
+    height: 50px;
 }
