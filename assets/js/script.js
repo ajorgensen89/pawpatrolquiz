@@ -65,6 +65,7 @@ startGame = () => {
     /**Spread operator to get any values from numberOfQuestions */
     otherQuestions = [...numberOfQuestions];
     getNextQuestion();
+    console.log("start game")
 }
 /**To get new question function*/
 getNextQuestion = () => {
@@ -72,11 +73,14 @@ getNextQuestion = () => {
         /**Track score */
         localStorage.setItem("previousScore", score);
         /**Go to this html page */
+        console.log("get next qu");
         return window.location.assign("end.html");
+        
     }
     
     questionCount++;
     progressName.textContent = `Question ${questionCount} of ${MAX_QUESTIONS}`;
+    console.log("questionCount area");
 /**Track the question the user is currently on and create quesion index*/
     let questionId = Math.floor(Math.random() * otherQuestions.length);
     actualQuestion = otherQuestions[questionId];
@@ -85,7 +89,7 @@ getNextQuestion = () => {
     choices.forEach(choice => {
         let number = choice.dataset["number"];
         choice.textContent = actualQuestion["choice" + number];
-
+        console.log("choices");
     });
     otherQuestions.splice(questionId, 1);
 
@@ -103,12 +107,14 @@ choices.forEach(choice => {
 
         if (classToApply === 'correct') {
             incrementScore(MAX_SCORE);
+            console.log("correct/incorrect zone");
         }
         selectedChoice.parentElement.classList.add(classToApply);
 
         setTimeout(() => {
             selectedChoice.parentElement.classList.remove(classToApply);
             getNextQuestion();
+            console.log("time out");
         }, 1000)
     })
 })
@@ -116,6 +122,7 @@ choices.forEach(choice => {
 incrementScore = num => {
     score +=num;
     scoreTotal.textContent = score;
+    console.log("increase score durring quiz");
 }
 
 startGame();
@@ -141,4 +148,41 @@ function sendMail() {
 let username = document.querySelector("#username");
 let endScoreButton = document.querySelector("#end-score-button");
 let endScore = document.querySelector("#end-score");
-let previousScore = document.querySelector("")
+let previousScore = localStorage.getItem("previousScore");
+
+let highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+
+const MAX_HIGH_SCORES = 5;
+endScore.textContent = previousScore;
+username.addEventListener("keyup", () => {
+    endScoreButton.disabled = !username.value;
+    console.log("1");
+
+});
+saveHighScore = e => {
+    e.preventDefault();
+
+    let score = {
+        score: previousScore,
+        name: username.value
+        
+    };
+    console.log("2");
+    highScores.push(score);
+
+    highScores.sort((a, b) => {
+        return b.score - a.score
+    });
+    highScores.splice(5);
+    console.log("3");
+    localStorage.setItem("highScores", JSON.stringify(highScores));
+    window.location.assign("highscore.html");
+    console.log("4");
+}
+
+let highScoresList = dpcument.querySelector("#highScoresList");
+let highScore = JSON.parse(localStorage.getItem("highscores")) || [];
+
+highScoresList.textContent = highScore.map(score => {
+    return `<li>${score.name} : ${score.score}</li>`
+}).join("");
