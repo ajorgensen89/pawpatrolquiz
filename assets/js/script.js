@@ -137,3 +137,8 @@ function sendMail() {
     return window.location.assign("back-form.html");
     // window.location.href = "back-form.html";
 }
+
+let username = document.querySelector("#username");
+let endScoreButton = document.querySelector("#end-score-button");
+let endScore = document.querySelector("#end-score");
+let previousScore = document.querySelector("")
