@@ -9,11 +9,13 @@ let question = document.querySelector("#question");
 let choices = Array.from(document.querySelectorAll(".choice-box"));
 let progressName = document.querySelector("#progress-name");
 let scoreTotal = document.querySelector('#score');
+let wrongScore = document.querySelector("#wrong");
 
 /** variable created to iterate through quiz array of numberOfQuestions */
 let actualQuestion = {};
 let checkAnswer = true;
 let score = 0;
+let wrong = 0;
 let questionCount = 0;
 let otherQuestions = [];
 
@@ -75,10 +77,10 @@ getNextQuestion = () => {
         /**Track score. Add +1 to score for each correct answer*/
         localStorage.setItem("previousScore", score);
         /**Go to this html page */
-        console.log("get next qu"); 
+        console.log("get next qu");
         return window.location.assign("quiz.html");
     }
-
+    /**Question counter  */
     questionCount++;
     progressName.textContent = `Question ${questionCount} of ${MAX_QUESTIONS}`;
     console.log("questionCount area");
@@ -97,55 +99,82 @@ getNextQuestion = () => {
     checkAnswer = true;
 }
 
+
 choices.forEach(choice => {
     choice.addEventListener("click", e => {
         if (!checkAnswer) return
-/**check user answer acgainst javascript answer */
+        /**check user answer acgainst javascript answer */
         checkAnswer = false;
         let selectedChoice = e.target;
         let selectedAnswer = selectedChoice.dataset["number"];
         let classToApply = selectedAnswer == actualQuestion.answers ? "correct" : "incorrect";
         /**Score is incremented */
         if (classToApply === 'correct') {
+            /**iterate questions until MAX_SCORE is met. (5)*/
             incrementScore(MAX_SCORE);
             console.log("correct/incorrect zone");
         }
         selectedChoice.parentElement.classList.add(classToApply);
-/**Time to show the correct selection and then iterate next question*/
+        /**Time to show the correct selection and then iterate next question. Removing class of correct/incorrect each time.*/
         setTimeout(() => {
             selectedChoice.parentElement.classList.remove(classToApply);
             getNextQuestion();
             console.log("time out");
         }, 1000)
     })
-   
+
 })
- /**increases score of quiz when correct answer is selected */
- incrementScore = num => {
+choices.forEach(choice => {
+    choice.addEventListener("click", e => {
+        // if (!checkAnswer) return
+        /**check user answer acgainst javascript answer */
+        checkA = false;
+        let selectedC = e.target;
+        let selectedA = selectedC.dataset["number"];
+        let classToApply = selectedA == actualQuestion.answers ? "correct" : "incorrect";
+        /**Score is incremented */
+        if (classToApply === 'incorrect') {
+            /**iterate questions until MAX_SCORE is met. (5)*/
+            badScore(MAX_SCORE);
+            console.log("correct/incorrect zone");
+        }
+        selectedChoice.parentElement.classList.add(classToApply);
+        /**Time to show the correct selection and then iterate next question*/
+        setTimeout(() => {
+            selectedChoice.parentElement.classList.remove(classToApply);
+            getNextQuestion();
+            console.log("time out");
+        }, 1000)
+    })
+
+})
+
+
+/**increases score of quiz when correct answer is selected */
+incrementScore = num => {
     score += num;
     scoreTotal.textContent = score;
     console.log("increase score durring quiz");
 }
+badScore = num => {
+    wrong += num;
+    wrongScore.textContent = wrong;
+    console.log("wrong increased!!");
+}
 
 startGame();
-
-// incrementScore = num => {
-//     score += num;
-//     endScore.textContent = score;
-//     console.log("final score");
-// }
 
 let username = document.querySelector("#username");
 let endScoreButton = document.querySelector("#end-score-button");
 let endScore = document.querySelector("#end-score");
 let previousScore = localStorage.getItem("previousScore");
-
+endScore.textContent = previousScore;
 
 // let highScores = JSON.parse(localStorage.getItem("#end-score")) || [];
 
-const MAX_HIGH_SCORES = 5;
+
 /**update score for viewing in Your score: */
-endScore.textContent = previousScore;
+// const MAX_HIGH_SCORES = 5;
 
 // username.addEventListener("keyup", () => {
 //     endScoreButton.disabled = !username.value;
