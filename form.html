@@ -23,18 +23,53 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+<!--script for email form-->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('3_yYZuiUdhs9t5UEH');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('contact_service', 'contact_form', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
 
-    <title>SendGrid User Interface</title>
+    <title>Contact Form</title>
 </head>
 
 <body>
-    <div>
+    <form id="contact-form">
+        <input type="hidden" name="contact_number">
+        <label>Name</label>
+        <input type="text" name="user_name">
+        <label>Email</label>
+        <input type="email" name="user_email">
+        <label>Message</label>
+        <textarea name="message"></textarea>
+        <input type="submit" value="Send">
+    </form>
+
+    <!-- <div>
         <a href="index.html"><i class="fa-solid fa-igloo"></i></a>
     </div>
 <div>
     <div>
-        <!--Submission form to include username, parents email and suggestion box-->
-        <form method="GET" action="back-form.html">
+        Submission form to include username, parents email and suggestion box-->
+        <!-- <form method="GET" action="back-form.html">
             <p><h4>Any Suggestions...?</h4>
                 <p>Hope you had fun playing this quiz about Paw Patrol!</p>
                 <p>
@@ -49,8 +84,8 @@
                 <label value="suggestion-box" for="suggestion">Suggestion:</label>
                 <input type="text" placeholder="Suggestion here" id="suggestion" class="newbie">
             </p>
-            <!-- form button -->
-            <div>
+            form button -->
+            <!-- <div>
                 <a href="back-form.html">
                     <button type="submit" class="button-normal button-hover">
                         <h2>Let's Go!</h2>
@@ -59,14 +94,10 @@
             </div>
         </form>
     </div>
-</div>
-
-
-
-               
-
-        </form>
-    </div>
+</div> -->
+           
+        <!-- </form>
+    </div> -->
 
     <!--script links to font awesome and javascript-->
     <script src="assets/js/script.js"></script>
