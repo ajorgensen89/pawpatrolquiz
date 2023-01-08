@@ -34,13 +34,25 @@ HTML, CSS and JavaScript has been used together for this project to produce a mu
 * [Technologies](#technologies)
 
 # User Experience
-
+This 'Pub quiz' style website uses questions about a children popular Tv Series called 'Paw Patrol'. They have a number of different series and a Paw Patrol movie too.<br>
+It is aimed for anyone who loves Paw Patrol. Kids and all those parents that get sucked into watching it too. The quiz contains 60 questions with three multiple choice questions(1:, 2:, 3:) for the user to select from. These question are randomly iterated through JavsScript for the user. So, if they were to play again, the next 10 questions they face, should be different. This hopefully should be a fun way of testing the user's knowledge about the Paw Patrol franchise.
+See [Features](#features) for explanation of the layout of the website. This includes, homepage, rules page, quiz itself and form page for suggestion submission.
 ***
 ### Wireframe
-
+Firstly, the answer for each question were going to be placed in radio buttons, as you can see on the wireframe. The firs
 ***
-# Featuresfeatures
+# Features
+### Homepage
+### Rules page
+### Quiz
+#### Questions
+#### Question Number counter
+#### Multiple choice qanswers
+#### Incorrect Score with an Image
+#### Correct Score with an Image
+#### Previous Score
 
+### Submission Form
 ***
 ### Future features
 
@@ -67,7 +79,8 @@ HTML, CSS and JavaScript has been used together for this project to produce a mu
 [Favicon Icon](https://www.favicon-generator.org/)<br>
 One of the characters in Paw Patrol is Everest. I used her colours throughout the website and for the favicon icon on the website after using the generator on the picture file. 
 
-[Bootstrap](https://www.w3schools.com/bootstrap/bootstrap_get_started.asp)
+[Email JS](https://www.emailjs.com/)<br>
+Used as a front-end server to create a email service to 'GET' suggestions to be sent to my email for responses from my Paw Patrol Quiz website.
 ***
 ### Credits
 
@@ -82,6 +95,7 @@ com%2Fth%2Fid%2FR.f89ca31207fcfea3794868f1aded9c9e%3Frik%3Dz9lZ6sawRspe%252bg%26
 * [Python Tutor](https://pythontutor.com/visualize.html#mode=edit) for assiting with viewing my javascript when building code.
 * [Pinterest](https://in.pinterest.com/pin/paw-patrol--414683078182219373/)
 * [Cartoon Goodies](https://cartoongoodies.com/png-images/paw-patrol-png-images/)
+* [Email JS](https://www.emailjs.com/)
 
 help with quiz
 https://www.geeksforgeeks.org/how-to-create-a-simple-javascript-quiz/

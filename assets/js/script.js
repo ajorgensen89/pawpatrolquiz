@@ -2,7 +2,7 @@ console.log("Fudge");
 
 /** Fixed score and question total value */
 const MAX_SCORE = 1;
-const MAX_QUESTIONS = 5;
+const MAX_QUESTIONS = 10;
 
 /**Query selector used to targert either class/id */
 let question = document.querySelector("#question");
@@ -160,12 +160,13 @@ incrementScore = num => {
     scoreTotal.textContent = score;
     console.log("increase score durring quiz");
 }
+/**increaes wrong score when incorrect answer is selected */
 badScore = num => {
     wrong += num;
     wrongScore.textContent = wrong;
     console.log("wrong increased!!");
 }
-
+/**Call start quiz function */
 startGame();
 
 let username = document.querySelector("#username");
@@ -174,27 +175,26 @@ let endScore = document.querySelector("#end-score");
 let previousScore = localStorage.getItem("previousScore");
 endScore.textContent = previousScore;
 
-/** Function to show image for correct score */
+/** Function to show image for correct score. Credit to MoonBooks.org in README.md */
 function correctImageScore() {
    
     let img = document.createElement("img");
     img.src = "./assets/images/quiz-images/yesPupCP.png";
-    let imageBlock1 = document.getElementById("x1");
-    if (oldScoreCorrect = +1) {
+    let imageBlock1 = document.getElementById("yes-pup");
+    if (score) {
         imageBlock1.appendChild(img);
         console.log("image1")
     }
     console.log("6");
-
 }
 
-/** Function to show image for incorrect score */
+/** Function to show image for incorrect score. Credit to MoonBooks.org in README.md */
 function incorrectImageScore() {
     
     let img = document.createElement("img");
     img.src = "./assets/images/quiz-images/NoPupCP.png";
-    let imageBlock2 = document.getElementById("x2");
-    if (oldScoreIncorrect = +1) {
+    let imageBlock2 = document.getElementById("no-pup");
+    if (wrong) {
         imageBlock2.appendChild(img);
         console.log("image2")
 
