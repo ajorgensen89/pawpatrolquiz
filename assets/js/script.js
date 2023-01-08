@@ -1,4 +1,22 @@
 console.log("Fudge");
+/**variable created for getting username */
+let newUser = document.querySelector("#new-user");
+let newUsers = newUser;
+console.log("yes", newUser);
+
+
+
+/**click function to get created username */
+// document.addEventListener("DOMContentLoaded", function (event) {
+//     let newUser = document.querySelector("#new-user");
+//     let newUsers = newUser;
+//     newUsers.addEventListener("click", function() {
+//         if (this.getAttribute(data-type) === "user") {
+//             alert(`User ${newUsers}`);
+//         }
+//     })
+  
+// });
 
 /** Fixed score and question total value */
 const MAX_SCORE = 1;
@@ -123,7 +141,7 @@ choices.forEach(choice => {
             console.log("time out");
         }, 1000)
     })
-    
+
 
 })
 /**click event for incorrect scores */
@@ -150,7 +168,7 @@ choices.forEach(choice => {
             console.log("time out");
         }, 1000)
     })
-  
+
 })
 
 
@@ -177,7 +195,7 @@ endScore.textContent = previousScore;
 
 /** Function to show image for correct score. Credit to MoonBooks.org in README.md */
 function correctImageScore() {
-   
+
     let img = document.createElement("img");
     img.src = "./assets/images/quiz-images/yesPupCP.png";
     let imageBlock1 = document.getElementById("yes-pup");
@@ -190,7 +208,7 @@ function correctImageScore() {
 
 /** Function to show image for incorrect score. Credit to MoonBooks.org in README.md */
 function incorrectImageScore() {
-    
+
     let img = document.createElement("img");
     img.src = "./assets/images/quiz-images/NoPupCP.png";
     let imageBlock2 = document.getElementById("no-pup");

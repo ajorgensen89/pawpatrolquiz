@@ -23,26 +23,26 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-<!--script for email form-->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <!--script for email form-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">
-        (function() {
+        (function () {
             // https://dashboard.emailjs.com/admin/account
             emailjs.init('3_yYZuiUdhs9t5UEH');
         })();
     </script>
     <script type="text/javascript">
-        window.onload = function() {
-            document.getElementById('contact-form').addEventListener('submit', function(event) {
+        window.onload = function () {
+            document.getElementById('contact-form').addEventListener('submit', function (event) {
                 event.preventDefault();
                 // generate a five digit number for the contact_number variable
                 this.contact_number.value = Math.random() * 100000 | 0;
                 // these IDs from the previous steps
                 emailjs.sendForm('contact_service', 'contact_form', this)
-                    .then(function() {
+                    .then(function () {
                         console.log('SUCCESS!');
                         return window.location.assign('back-form.html')
-                    }, function(error) {
+                    }, function (error) {
                         console.log('FAILED...', error);
                     });
             });
@@ -70,42 +70,6 @@
             </button>
         </a>
     </div>
-
-    <!-- <div>
-        <a href="index.html"><i class="fa-solid fa-igloo"></i></a>
-    </div>
-<div>
-    <div>
-        Submission form to include username, parents email and suggestion box-->
-        <!-- <form method="GET" action="back-form.html">
-            <p><h4>Any Suggestions...?</h4>
-                <p>Hope you had fun playing this quiz about Paw Patrol!</p>
-                <p>
-                <label value="username" for="username">Username:</label>
-                <input type="text" placeholder="username" id="username" class="newbie">
-            </p>
-            <p>
-                <label value="parents email" for="email">Email:</label>
-                <input type="email" placeholder="parents email" id="email" class="newbie">
-            </p>
-            <p>
-                <label value="suggestion-box" for="suggestion">Suggestion:</label>
-                <input type="text" placeholder="Suggestion here" id="suggestion" class="newbie">
-            </p>
-            form button -->
-            <!-- <div>
-                <a href="back-form.html">
-                    <button type="submit" class="button-normal button-hover">
-                        <h2>Let's Go!</h2>
-                    </button>
-                </a>
-            </div>
-        </form>
-    </div>
-</div> -->
-           
-        <!-- </form>
-    </div> -->
 
     <!--script links to font awesome and javascript-->
     <script src="assets/js/script.js"></script>

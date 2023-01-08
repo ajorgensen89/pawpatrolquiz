@@ -34,12 +34,24 @@ HTML, CSS and JavaScript has been used together for this project to produce a mu
 * [Technologies](#technologies)
 
 # User Experience
-This 'Pub quiz' style website uses questions about a children popular Tv Series called 'Paw Patrol'. They have a number of different series and a Paw Patrol movie too.<br>
-It is aimed for anyone who loves Paw Patrol. Kids and all those parents that get sucked into watching it too. The quiz contains 60 questions with three multiple choice questions(1:, 2:, 3:) for the user to select from. These question are randomly iterated through JavsScript for the user. So, if they were to play again, the next 10 questions they face, should be different. This hopefully should be a fun way of testing the user's knowledge about the Paw Patrol franchise.
-See [Features](#features) for explanation of the layout of the website. This includes, homepage, rules page, quiz itself and form page for suggestion submission.
+This 'Pub quiz' style website uses questions about a children popular `Tv Series called 'Paw Patrol'`. They have a number of different series and a `Paw Patrol` movie too.<br>
+It is aimed for anyone who loves `Paw Patrol`. Kids and all those parents that get sucked into watching it too. The quiz contains 60 questions with three multiple choice questions(1:, 2:, 3:) for the user to select from. These question are randomly iterated through JavsScript for the user. So, if they were to play again, the next 10 questions they face, should be different. This hopefully should be a fun way of testing the user's knowledge about the `Paw Patrol franchise`.<br>
+See [Features](#features) for explanation of the layout of the website. This includes, _homepage_, _rules_ page, _quiz_ itself and _form_ page for suggestion submission.
 ***
 ### Wireframe
-Firstly, the answer for each question were going to be placed in radio buttons, as you can see on the wireframe. The firs
+###### Welcome page to start of quiz
+A _username_ can be created before entering the game. From this page I orginally linked it to the _rules_. However, as you shall see in `features`, I have put the _rules_ to play the quiz onto another page. Then from the _rules_ page, you can _enter_ the game.<br>
+![wireframe image 1](assets/images/readme-images/wireframe1.png)
+###### Levels and Quiz Page
+![wireframe image 2](assets/images/readme-images/wirefram2.png)
+###### Form Page
+![wireframe image 3](assets/images/readme-images/wireframe3.png)
+###### 
+![wireframe image 4](assets/images/readme-images/wireframe4.png)
+
+
+
+
 ***
 # Features
 ### Homepage
