@@ -73,23 +73,18 @@ input::placeholder {
 
 }
 
-.correct-image {
-    background-color: brown;
-    background-image: image(url'./images/quiz-images/yesPupCP.png');
-    width: 50px;
-    height: 50px;
-}
-
 .incorrect {
     background-color: rgb(197, 6, 41);
 }
-
-.incorrect-image {
-    background-color: brown;
-    background-image: image(url'./images/quiz-images/NoPupCP.png');
-    width: 50px;
-    height: 50px;
+/*Image for correct/incorrect area*/
+img {
+    width: 110px;
+    height: 125px;
 }
+li {
+    list-style-type: none;
+}
+
 
 /*place score/wrong score on quiz.html page*/
 /* .hold-left {

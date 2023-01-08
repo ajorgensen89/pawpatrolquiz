@@ -99,7 +99,7 @@ getNextQuestion = () => {
     checkAnswer = true;
 }
 
-
+/**click event for correct scores */
 choices.forEach(choice => {
     choice.addEventListener("click", e => {
         if (!checkAnswer) return
@@ -113,6 +113,7 @@ choices.forEach(choice => {
             /**iterate questions until MAX_SCORE is met. (5)*/
             incrementScore(MAX_SCORE);
             console.log("correct/incorrect zone");
+            correctImageScore();
         }
         selectedChoice.parentElement.classList.add(classToApply);
         /**Time to show the correct selection and then iterate next question. Removing class of correct/incorrect each time.*/
@@ -122,8 +123,10 @@ choices.forEach(choice => {
             console.log("time out");
         }, 1000)
     })
+    
 
 })
+/**click event for incorrect scores */
 choices.forEach(choice => {
     choice.addEventListener("click", e => {
         // if (!checkAnswer) return
@@ -137,6 +140,7 @@ choices.forEach(choice => {
             /**iterate questions until MAX_SCORE is met. (5)*/
             badScore(MAX_SCORE);
             console.log("correct/incorrect zone");
+            incorrectImageScore();
         }
         selectedChoice.parentElement.classList.add(classToApply);
         /**Time to show the correct selection and then iterate next question*/
@@ -146,7 +150,7 @@ choices.forEach(choice => {
             console.log("time out");
         }, 1000)
     })
-
+  
 })
 
 
@@ -169,6 +173,36 @@ let endScoreButton = document.querySelector("#end-score-button");
 let endScore = document.querySelector("#end-score");
 let previousScore = localStorage.getItem("previousScore");
 endScore.textContent = previousScore;
+
+/** Function to show image for correct score */
+function correctImageScore() {
+   
+    let img = document.createElement("img");
+    img.src = "./assets/images/quiz-images/yesPupCP.png";
+    let imageBlock1 = document.getElementById("x1");
+    if (oldScoreCorrect = +1) {
+        imageBlock1.appendChild(img);
+        console.log("image1")
+    }
+    console.log("6");
+
+}
+
+/** Function to show image for incorrect score */
+function incorrectImageScore() {
+    
+    let img = document.createElement("img");
+    img.src = "./assets/images/quiz-images/NoPupCP.png";
+    let imageBlock2 = document.getElementById("x2");
+    if (oldScoreIncorrect = +1) {
+        imageBlock2.appendChild(img);
+        console.log("image2")
+
+    }
+    console.log("7");
+}
+
+
 
 // let highScores = JSON.parse(localStorage.getItem("#end-score")) || [];
 
