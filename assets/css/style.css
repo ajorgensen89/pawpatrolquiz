@@ -1,35 +1,50 @@
+/*Set basic style for body*/
 body {
     font-family: 'Gloria Hallelujah', 'sans serif';
     text-align: center;
+    cursor: pointer;
 }
 
+header {
+    color: rgb(29, 7, 51);
+    border-bottom: 2px solid rgb(29, 7, 51);
+    position: fixed;
+    width: 100%;
+}
+
+/*Set basic style for paragraphs*/
 p {
     margin: 30px 0;
 }
 
+/*Set basic style for icons*/
 i {
     color: black;
     float: left;
+    font-size: 50px;
 }
 
+/*Set basic style for icons when hovered over*/
 i:hover {
     color: rgb(165, 9, 231);
     transition: transform 150ms;
     transform: scale(1.1);
 }
 
-a {
-    color: black;
-    text-decoration: none;
-}
-
-.quiz-field {
+/* .quiz-field {
+    background-image: url(../images/quiz-images/quiz-field.jpg);
+    background-color: aqua;
     text-align: center;
-}
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+    height: 400px;
+    
+} */
 
 /*username before hover*/
 .newbie {
-    padding: 1rem;
     border: none;
     border-bottom: 1px solid black;
 }
@@ -48,24 +63,45 @@ input::placeholder {
 
 /*Create username button before hover*/
 .button-normal {
+    font-family: 'Gloria Hallelujah', 'sans serif';
+    font-weight: bolder;
     border: none;
     background-color: white;
     color: black;
     border: 2px solid black;
     border-radius: 50px;
     text-align: center;
-    margin: 50px 0;
-    padding: 10px;
-
+    padding: 5px;
 }
 
 /*Create username button after hover*/
-.button-hover:hover {
+.button-normal:hover {
+    font-family: 'Gloria Hallelujah', 'sans serif';
+    font-weight: bolder;
     color: rgb(165, 9, 231);
     text-align: center;
     border: 4px solid rgb(165, 9, 231);
     padding: 10px;
-    margin: 50px 0;
+}
+
+/*Rules.html page button before hover*/
+.button-normal-rules {
+    border: none;
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    border-radius: 50px;
+    text-align: center;
+    margin: 0;
+}
+
+/*Rules.html page button before hover*/
+.button-normal-rules:hover {
+    color: rgb(165, 9, 231);
+    text-align: center;
+    border: 4px solid rgb(165, 9, 231);
+    padding: 10px;
+    margin: 0;
 }
 
 .correct {
@@ -76,6 +112,7 @@ input::placeholder {
 .incorrect {
     background-color: rgb(197, 6, 41);
 }
+
 /*Image for correct/incorrect area*/
 /* img {
     width: 110px;
@@ -84,7 +121,8 @@ input::placeholder {
 img {
     width: 80px;
     height: 95px;
-} 
+}
+
 li {
     list-style-type: none;
 }
@@ -103,25 +141,32 @@ li {
     width: 25%;
 } */
 
-/*Media queries*/
+.usernameLabel {
+    font-family: 'Luckiest Guy', 'sans serif';
+}
 
-/* @media screen and (max-width: 868px) {
-    img {
-        width: 80px;
-        height: 95px;
-    }   
-} */
+/*Media queries*/
 
 @media screen and (max-width: 768px) {
     img {
         width: 60px;
         height: 75px;
-    }   
+    }
 }
 
 @media screen and (max-width: 414px) {
     img {
         width: 30px;
         height: 40px;
+    }
+
+    i {
+        font-size: 20px;
+    }
+    header {
+        height: 53px;
+    }
+    h1 {
+        font-size: 30px;
     }
 }

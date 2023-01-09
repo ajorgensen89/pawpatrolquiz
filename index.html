@@ -13,38 +13,45 @@
     <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Luckiest+Guy&family=Sen&display=swap"
         rel="stylesheet">
     <!--link to external html files-->
+    <link rel="back-form page" href="back-form.html">
+    <link rel="form page" href="form.html">
     <link rel="rules page" href="rules.html">
-    <link rel="rules page" href="highscore.html">
-    
+    <link rel="quiz page" href="quiz.html">
     <title>Paw Patrol Quiz</title>
 </head>
 
 <body>
-    <div class="quiz-field">
+   <header>
         <div>
             <a href="index.html"><i class="fa-solid fa-igloo"></i></a>
         </div>
+    </header>
+        <div class="quiz-field">
         <div>
             <h1>Paw Patrol Quiz</h1>
         </div>
         <div>
-
-            <label>Create username!</label>
-            
-            <input type="text" id="userText">
-            <button type="button" id="submitButton">Submit</button>
             <div>
-                <label id="usernameLabel"></label>
+                <label><h2>Create username:</h2></label>
+
+                <input type="text" id="userText" placeholder="name" class="newbie"><br>
+
+                <label id="usernameLabel"></label><br>
             </div>
+            <br>
+            <button type="button" id="submitButton" class="button-normal button-hover"><h3>Submit</h3></button>
 
-            <p><a href="rules.html" class="button-normal button-hover">Start Game!</a></p>
+
+            <p><a href="rules.html"><button type="button" class="button-normal button-hover"><h3>Start Game!</h3></button></a>
+            </p>
 
         </div>
         <div>
-            <p><a href="rules.html"><strong class="button-normal button-hover">Rules</strong></a></p>
+            <p><a href="rules.html"><button type="button" class="button-normal button-hover"><h3>Rules!</h3></button></a></p>
         </div>
         <div>
-            <p><a href="form.html"><strong class="button-normal button-hover">Submit a Suggestion</strong></a></p>
+            <p><a href="form.html"><button type="button" class="button-normal button-hover"><h3>Post Your
+                        Feedback!</h3></button></a></p>
         </div>
 
     </div>
@@ -54,7 +61,8 @@
         document.getElementById("submitButton").onclick = function () {
             username = document.getElementById("userText").value;
             console.log(username);
-            document.getElementById("usernameLabel").textContent = username + ". Welcome! You are ready to play. Click on Start Game!";
+            document.getElementById("usernameLabel").textContent = username +
+                "!! Welcome!! You are ready to play? Click on 'Start Game'!!";
         };
     </script>
     <!--javascript link-->

@@ -101,6 +101,7 @@ let numberOfQuestions = [{
     },
 ];
 /**Start the quiz function*/
+let startGame;
 startGame = () => {
     questionCount = 0;
     score = 0;
@@ -108,8 +109,9 @@ startGame = () => {
     otherQuestions = [...numberOfQuestions];
     getNextQuestion();
     console.log("start game");
-}
+};
 /**To get new question function*/
+let getNextQuestion;
 getNextQuestion = () => {
     if (otherQuestions.length === 0 || questionCount >= MAX_QUESTIONS) {
         /**Track score. Add +1 to score for each correct answer*/
@@ -117,7 +119,7 @@ getNextQuestion = () => {
         /**Go to this html page */
         console.log("get next qu");
         return window.location.assign("quiz.html");
-    };
+    }
     /**Question counter  */
     questionCount++;
     progressName.textContent = `Question ${questionCount} of ${MAX_QUESTIONS}`;
@@ -171,12 +173,14 @@ choices.forEach(choice => {
 
 
 /**increases score of quiz when correct answer is selected */
+let incrementScore;
 incrementScore = num => {
     score += num;
     scoreTotal.textContent = score;
     console.log("increase score durring quiz");
 };
 /**increaes wrong score when incorrect answer is selected */
+let badScore;
 badScore = num => {
     wrong += num;
     wrongScore.textContent = wrong;
@@ -186,7 +190,7 @@ badScore = num => {
 startGame();
 
 // let username = document.querySelector("#username");
-let endScoreButton = document.querySelector("#end-score-button");
+// let endScoreButton = document.querySelector("#end-score-button");
 let endScore = document.querySelector("#end-score");
 let previousScore = localStorage.getItem("previousScore");
 endScore.textContent = previousScore;
@@ -199,10 +203,10 @@ function correctImageScore() {
     let imageBlock1 = document.getElementById("yes-pup");
     if (score) {
         imageBlock1.appendChild(img);
-        console.log("image1")
-    };
+        console.log("image1");
+    }
     console.log("6");
-};
+}
 
 /** Function to show image for incorrect score. Credit to MoonBooks.org in README.md */
 function incorrectImageScore() {
@@ -214,6 +218,6 @@ function incorrectImageScore() {
         imageBlock2.appendChild(img);
         console.log("image2");
 
-    };
+    }
     console.log("7");
-};
+}
