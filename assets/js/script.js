@@ -13,12 +13,12 @@ console.log("Fudge");
 //             alert(`User ${newUsers}`);
 //         }
 //     })
-  
+
 // });
 
 /** Fixed score and question total value */
 const MAX_SCORE = 1;
-const MAX_QUESTIONS = 5;
+const MAX_QUESTIONS = 10;
 
 /**Query selector used to targert either class/id */
 let question = document.querySelector("#question");
@@ -78,7 +78,43 @@ let numberOfQuestions = [{
         choice2: "Zuma",
         choice3: "Skye",
         answers: 3,
-    }
+    },
+    {
+        question: "What is naughty Majors name in Paw Patrol who causes problems for the Paw Patrol gang?",
+        choice1: "Major Goodway",
+        choice2: "Major Humdinger",
+        choice3: "Major Johnson",
+        answers: 2,
+    },
+    {
+        question: "What name is given to the puppy who wears a blue police unifrom in Paw Patrol?",
+        choice1: "Chase",
+        choice2: "Rumble",
+        choice3: "Tracker",
+        answers: 1,
+    },
+    {
+        question: "What colour clothing does Rubble mostly wear?",
+        choice1: "Red",
+        choice2: "Orange",
+        choice3: "Yellow",
+        answers: 3,
+    },
+    {
+        question: "What colours are the clothing Rocky mostly wear?",
+        choice1: "Blue",
+        choice2: "Red",
+        choice3: "Green",
+        answers: 3,
+    },
+    {
+
+        question: "What is the name of the Red Dragon in Paw Patrol, Rescue Knights?",
+        choice1: "Sparks",
+        choice2: "Flames",
+        choice3: "Ignites",
+        answers: 1,
+    },
 ];
 /**Start the quiz function*/
 startGame = () => {
