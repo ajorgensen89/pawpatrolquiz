@@ -4,6 +4,7 @@ body {
     text-align: center;
     cursor: pointer;
 }
+
 /*Header with icon to homepage. (small explation on homepage for its use and again, in rules)*/
 header {
     color: rgb(29, 7, 51);
@@ -70,6 +71,7 @@ input::placeholder {
 input {
     width: 250px;
 }
+
 /*Label of inpupt field padding*/
 label {
     margin-right: 20px;
@@ -115,6 +117,7 @@ label {
     padding: 10px;
     margin: 0;
 }
+
 /*correct and incorrect classes used in javascript to identify if the answer picked is right or wrong*/
 .correct {
     background-color: rgb(10, 164, 61);
@@ -125,25 +128,45 @@ label {
     background-color: rgb(197, 6, 41);
 }
 
+/*Size to image for correct and incorrect answer (viewed during quiz)*/
 img {
     width: 80px;
     height: 95px;
 }
 
+/*List style*/
 li {
-    list-style-type: none;
+    list-style-type: circle;
 }
 
+/*Targets the text presented after, a username is entered*/
 #usernameLabel {
     font-family: 'Luckiest Guy', 'sans serif';
 }
 
-/*Media queries*/
+/*Height gap added to form*/
+.height-gap {
+    height: 100px;
+    font-weight: bolder;
+    font-size: 30px;
+}
 
+/*Send button on form*/
+#send-margin {
+    padding: 20px;
+}
+
+/*Media queries*/
 @media screen and (max-width: 768px) {
     img {
         width: 60px;
         height: 75px;
+    }
+}
+
+@media screen and (max-width: 436px) {
+    .height-gap {
+        font-size: 20px;
     }
 }
 
@@ -154,7 +177,7 @@ li {
     }
 
     i {
-        font-size: 40px;
+        font-size: 30px;
     }
 
     header {
@@ -164,14 +187,21 @@ li {
     h1 {
         font-size: 30px;
     }
+
     h2 {
         font-size: 20px;
     }
+
     #igloo {
         float: left;
         font-size: 8px;
     }
+
     p {
         margin: 10px 0;
+    }
+
+    #send-margin {
+        padding: 10px;
     }
 }
