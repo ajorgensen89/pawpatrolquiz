@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
-    <!--links to google fonts (could of used @import to CSS file instead)-->
+    <!--links to google fonts (could use @import in CSS file instead)-->
     <link href="https://fonts.googleapis.com/css?family=Raleway%7CRighteous" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +14,7 @@
         rel="stylesheet">
     <!--link to external html files-->
     <link rel="rules page" href="rules.html">
-     <link rel="rules page" href="highscore.html">
+    <link rel="rules page" href="highscore.html">
     <!--links for favicon icon-->
     <!-- <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
     <link rel="manifest" href="/manifest.json">
@@ -34,18 +34,17 @@
             <h1>Paw Patrol Quiz</h1>
         </div>
         <div>
-            <form>
-            <p>
-                <!--create username-->
-                <h2>Create Username</h2>
-                <!-- <label>Username</label>
-        <input type="text" name="useremail" id="new-user" data-type="user" class="button-normal button-hover"> -->
-            </p>
-            <!--Input username and then head to rules.html page to start.-->
-            <!--Change to rules page??  Then start game..............................................................................-->
-            <p><input type="text" placeholder="user name" id="username" id="newbie" id="new-user" data-type="user"></p>
-            <p><a href="rules.html" id="new-user" data-type="user"><label for="newbie" class="button-normal button-hover" id="new-user" data-type="user">Start Game!</label></a></p>
-        </form>
+
+            <label>Create username!</label>
+            
+            <input type="text" id="userText">
+            <button type="button" id="submitButton">Submit</button>
+            <div>
+                <label id="usernameLabel"></label>
+            </div>
+
+            <p><a href="rules.html" class="button-normal button-hover">Start Game!</a></p>
+
         </div>
         <div>
             <p><a href="rules.html"><strong class="button-normal button-hover">Rules</strong></a></p>
@@ -54,17 +53,16 @@
             <p><a href="form.html"><strong class="button-normal button-hover">Submit a Suggestion</strong></a></p>
         </div>
 
-
-
-        <!-- <div>
-            <a href="rules.html">
-                <button type="submit" >
-                    <h2>START!</h2>
-                </button>
-            </a>
-        </div> -->
     </div>
+    <script>
+        let username;
 
+        document.getElementById("submitButton").onclick = function () {
+            username = document.getElementById("userText").value;
+            console.log(username);
+            document.getElementById("usernameLabel").textContent = username + ". Welcome! You are ready to play. Click on Start Game!";
+        }
+    </script>
     <!--javascript link-->
     <script src="assets/js/script.js"></script>
     <!--font awesome script-->

@@ -1,20 +1,10 @@
 console.log("Fudge");
-/**variable created for getting username */
-// let newUser = document.querySelector("#new-user");
-// let newUsers = newUser;
-// console.log("yes", newUser);
+// let username;
 
-/**click function to get created username */
-// document.addEventListener("DOMContentLoaded", function (event) {
-//     let newUser = document.querySelector("#new-user");
-//     let newUsers = newUser;
-//     newUsers.addEventListener("click", function() {
-//         if (this.getAttribute(data-type) === "user") {
-//             alert(`User ${newUsers}`);
-//         }
-//     })
-
-// });
+// document.getElementById("submitButton").onclick = function(){
+//     username = document.getElementById("userText").value;
+//     console.log(username);
+// }
 
 /** Fixed score and question total value */
 const MAX_SCORE = 1;
@@ -201,7 +191,7 @@ badScore = num => {
 /**Call start quiz function */
 startGame();
 
-let username = document.querySelector("#username");
+// let username = document.querySelector("#username");
 let endScoreButton = document.querySelector("#end-score-button");
 let endScore = document.querySelector("#end-score");
 let previousScore = localStorage.getItem("previousScore");
