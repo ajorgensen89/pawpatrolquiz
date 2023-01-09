@@ -98,3 +98,19 @@ li {
     font-size: 50px;
     width: 25%;
 } */
+
+/*Media queries*/
+
+@media screen and (max-width: 768px) {
+    img {
+        width: 70px;
+        height: 85px;
+    }   
+}
+
+@media screen and (max-width: 340px) {
+    img {
+        width: 30px;
+        height: 45px;
+    }
+}

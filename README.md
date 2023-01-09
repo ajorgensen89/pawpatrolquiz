@@ -66,14 +66,15 @@ On the Homepage, you always have access to the Form page via _submit a suggestio
 This page holds the instrustions on how the quiz is set up and how it should be played. To enter the quiz you **click** the **Let's Go!** button.<br>
 In the top left corner, a [Font Awesome](https://fontawesome.com/) **Icon** can be used to link back to the Home Page.
 ### Quiz Questions
-The Quiz itself presents ten different question all with three answers to choice from. An array of sixty questions can be iterated through so, the next time the user plays, different questions should be revealed to give varity to the Quiz if a user decides to play again.<br>
+The Quiz itself presents ten different questions, all with three answers to choose from. An array of sixty questions can be iterated through so, the next time the user plays, different questions should be revealed to give varity to the Quiz if a user decides to play again.<br>
+A feature has been added to the game to help the user keep track of what number question you are on at the top of the page. It shows as _1 of 10_, _2 of 10_, _3 0f 10_, all the way to _10 of 10_.
 In the top left corner, a [Font Awesome](https://fontawesome.com/) **Icon** can be used to link back to the Home Page.
 ### Quiz Answers
 Once the user has read the answer, they can answer by **clicking** on that answer they think it to be **true** or **correct**.<br>
 A _class_ is then applied from [CSS]() by using [JavaScript]() to the **clicked** answer. It then lights up either _green_ for **correct** or, _red_ for **incorrect**.<br>
 
 ### Question Number counter
-Once the user has **clicked** on the answer they choose, a score counter counts the score of both **correct** and **incorrect** answers. At the end of the round of 10 questions, the score is saved to the bottom of the Quiz and the user can try the quiz again to see if they can beat this score.<br>
+Once the user has **clicked** on the answer they choose, a score counter counts the score of both **correct** and **incorrect** answers. At the end of the round of 10 questions and reachs _10 of 10_, the score is saved to the bottom of the Quiz page and the user can try the quiz again to see if they can beat this score.<br>
 
 ### Correct and Incorrect Scores with an Image
 Aswell as seeing the score counters increase, an image is displayed with a correct and incorrect answer. The picture for a **correct** answer is a happy picture of Everest, a main character from `Paw Patrol`, as the user got the answer right. The **incorrect** answer selected, displays a sad picture of Everest, as the user made the wrong choice.<br>
@@ -87,7 +88,7 @@ On the final page, when a suggestion has been submitted on the **form**, the use
 In the top left corner, a [Font Awesome](https://fontawesome.com/) **Icon** can be used to link back to the Home Page.
 ***
 ## Future features
-
+A quiz based game on a wesbite can hold many different features
 ***
 # [Testing](testing.md)
 
