@@ -31,11 +31,13 @@ let wrongScore = document.querySelector("#wrong");
 
 /** variable created to iterate through quiz array of numberOfQuestions */
 let actualQuestion = {};
-let checkAnswer = true;
 let score = 0;
 let wrong = 0;
 let questionCount = 0;
 let otherQuestions = [];
+
+/**remove default false start to checking the quiz answer */
+let checkAnswer = true;
 
 let numberOfQuestions = [{
         question: "What is naughty Majors name in Paw Patrol who causes problems for the Paw Patrol gang?",
@@ -149,7 +151,7 @@ choices.forEach(choice => {
     choice.addEventListener("click", e => {
         // if (!checkAnswer) return
         /**check user answer acgainst javascript answer */
-        checkA = false;
+        checkAnswer = false;
         let selectedC = e.target;
         let selectedA = selectedC.dataset["number"];
         let classToApply = selectedA == actualQuestion.answers ? "correct" : "incorrect";
@@ -160,10 +162,10 @@ choices.forEach(choice => {
             console.log("correct/incorrect zone");
             incorrectImageScore();
         }
-        selectedChoice.parentElement.classList.add(classToApply);
+        selectedC.parentElement.classList.add(classToApply);
         /**Time to show the correct selection and then iterate next question*/
         setTimeout(() => {
-            selectedChoice.parentElement.classList.remove(classToApply);
+            selectedC.parentElement.classList.remove(classToApply);
             getNextQuestion();
             console.log("time out");
         }, 1000)
