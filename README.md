@@ -148,7 +148,7 @@ com%2Fth%2Fid%2FR.f89ca31207fcfea3794868f1aded9c9e%3Frik%3Dz9lZ6sawRspe%252bg%26
 * [Python Tutor](https://pythontutor.com/visualize.html#mode=edit) for assiting with viewing my javascript when building code.
 * [Pinterest](https://in.pinterest.com/pin/paw-patrol--414683078182219373/) for images.
 * [Cartoon Goodies](https://cartoongoodies.com/png-images/paw-patrol-png-images/) for images.
-* [Email JS](https://www.emailjs.com/)
+* [Email JS](https://www.emailjs.com/) for form.
 * [Youtubers](https://www.youtube.com/watch?v=f4fB9Xg2JEY&t=2996s) guide for quiz.
 * [Youtubers](https://www.youtube.com/watch?v=fARJwGqdbKQ) guide for username.
 ***

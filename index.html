@@ -21,40 +21,57 @@
 </head>
 
 <body>
-   <header>
+    <!--Header holds the icon to get back to the homepage. Little description for the icon is only found on the homepage. 
+        Igloo Icon meantioned in RULES to inform user of its use. -->
+    <header>
         <div>
             <a href="index.html"><i class="fa-solid fa-igloo"></i></a>
             <span id="igloo">Click here on Everests Igloo to return to this page at any point!</span>
         </div>
     </header>
-        <div class="quiz-field">
+    <div class="quiz-field">
         <div>
-            <h1>Paw Patrol Quiz</h1>
+            <h1>Paw Patrol Quiz Welcome Page</h1>
         </div>
         <div>
             <div>
-                <label><h2>Create username:</h2></label>
+                <!--Create username-->
+                <label>
+                    <h2>Create username:</h2>
+                </label>
 
                 <input type="text" id="userText" placeholder="name" class="newbie" required><br>
-
+                <!--Print username with message from javascript-->
                 <label id="usernameLabel"></label><br>
             </div>
-            <button type="button" id="submitButton" class="button-normal button-hover"><h3>Submit</h3></button>
+            <!--Submit button for username-->
+            <button type="button" id="submitButton" class="button-normal button-hover">
+                <h3>Submit</h3>
+            </button>
 
-
-            <p><a href="rules.html"><button type="button" class="button-normal button-hover"><h3>Start Game!</h3></button></a>
+            <!--Navigate to starting game - first looking at the rules-->
+            <p><a href="rules.html"><button type="button" class="button-normal button-hover">
+                        <h3>Start Game!</h3>
+                    </button></a>
             </p>
 
         </div>
         <div>
-            <p><a href="rules.html"><button type="button" class="button-normal button-hover"><h3>Rules!</h3></button></a></p>
+            <!--Navigate to the rules-->
+            <p><a href="rules.html"><button type="button" class="button-normal button-hover">
+                        <h3>Rules!</h3>
+                    </button></a></p>
         </div>
         <div>
-            <p><a href="form.html"><button type="button" class="button-normal button-hover"><h3>Post Your
-                        Feedback!</h3></button></a></p>
+            <!--Navigate to the Feedback Form-->
+            <p><a href="form.html"><button type="button" class="button-normal button-hover">
+                        <h3>Post Your
+                            Feedback!</h3>
+                    </button></a></p>
         </div>
 
     </div>
+    <!--javascript for username entry for index.html page only-->
     <script src="assets/js/username/username.js"></script>
     <!--javascript link-->
     <script src="assets/js/script.js"></script>
