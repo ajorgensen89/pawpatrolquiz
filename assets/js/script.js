@@ -166,8 +166,13 @@ choices.forEach(choice => {
         if (classToApply === 'correct') {
             /**iterate questions until MAX_SCORE is met. (5)*/
             incrementScore(MAX_SCORE);
-            console.log("correct/incorrect zone");
+            console.log("correct zone");
             correctImageScore();
+        }
+        if (classToApply === 'incorrect') {
+            badScore(MAX_SCORE);
+            incorrectImageScore();
+            console.log("incorrect zone");
         }
         selectedChoice.parentElement.classList.add(classToApply);
         /**Time to show the correct selection and then iterate next question. Removing class of correct/incorrect each time.*/
@@ -179,57 +184,6 @@ choices.forEach(choice => {
     })
 })
 /**click event for incorrect scores */
-
-// choices.forEach(choice => {
-//     choice.addEventListener("click", e => {
-//         // if (!checkAnswer) return
-//         /**check user answer acgainst javascript answer */
-//         checkAnswer = false;
-//         let selectedC = e.target;
-//         let selectedA = selectedC.dataset["number"];
-//         let classToApply = selectedA == actualQuestion.answers ? "correct" : "incorrect";
-//         /**Score is incremented */
-//         if (classToApply === 'incorrect') {
-//             /**iterate questions until MAX_SCORE is met. (5)*/
-//             badScore(MAX_SCORE);
-//             console.log("correct/incorrect zone");
-//             incorrectImageScore();
-//         }
-//         selectedC.parentElement.classList.add(classToApply);
-//         /**Time to show the correct selection and then iterate next question*/
-//         setTimeout(() => {
-//             selectedC.parentElement.classList.remove(classToApply);
-//             getNextQuestion();
-//             console.log("time out");
-//         }, 1000)
-//     })
-
-// })
-
-choices.forEach(choice => {
-    choice.addEventListener("click", e => {
-        // if (!checkAnswer) return
-        /**check user answer acgainst javascript answer */
-        checkA = false;
-        let selectedC = e.target;
-        let selectedA = selectedC.dataset["number"];
-        let classToApply = selectedA == actualQuestion.answers ? "correct" : "incorrect";
-        /**Score is incremented */
-        if (classToApply === 'incorrect') {
-            /**iterate questions until MAX_SCORE is met. (5)*/
-            badScore(MAX_SCORE);
-            console.log("correct/incorrect zone");
-            incorrectImageScore();
-        }
-        selectedChoice.parentElement.classList.add(classToApply);
-        /**Time to show the correct selection and then iterate next question*/
-        setTimeout(() => {
-            selectedChoice.parentElement.classList.remove(classToApply);
-            getNextQuestion();
-            console.log("time out");
-        }, 1000)
-    })
-})
 
 
 /**increases score of quiz when correct answer is selected */
@@ -274,7 +228,7 @@ function incorrectImageScore() {
     let imageBlock2 = document.getElementById("no-pup");
     if (wrong) {
         imageBlock2.appendChild(img);
-        console.log("image2")
+        console.log("image2");
 
     }
     console.log("7");
