@@ -1,10 +1,8 @@
 console.log("Fudge");
 /**variable created for getting username */
-let newUser = document.querySelector("#new-user");
-let newUsers = newUser;
-console.log("yes", newUser);
-
-
+// let newUser = document.querySelector("#new-user");
+// let newUsers = newUser;
+// console.log("yes", newUser);
 
 /**click function to get created username */
 // document.addEventListener("DOMContentLoaded", function (event) {
@@ -20,7 +18,7 @@ console.log("yes", newUser);
 
 /** Fixed score and question total value */
 const MAX_SCORE = 1;
-const MAX_QUESTIONS = 10;
+const MAX_QUESTIONS = 5;
 
 /**Query selector used to targert either class/id */
 let question = document.querySelector("#question");
@@ -123,7 +121,7 @@ getNextQuestion = () => {
 choices.forEach(choice => {
     choice.addEventListener("click", e => {
         if (!checkAnswer) return
-        /**check user answer acgainst javascript answer */
+        /**check user answer against javascript answer */
         checkAnswer = false;
         let selectedChoice = e.target;
         let selectedAnswer = selectedChoice.dataset["number"];
@@ -143,15 +141,40 @@ choices.forEach(choice => {
             console.log("time out");
         }, 1000)
     })
-
-
 })
 /**click event for incorrect scores */
+
+// choices.forEach(choice => {
+//     choice.addEventListener("click", e => {
+//         // if (!checkAnswer) return
+//         /**check user answer acgainst javascript answer */
+//         checkAnswer = false;
+//         let selectedC = e.target;
+//         let selectedA = selectedC.dataset["number"];
+//         let classToApply = selectedA == actualQuestion.answers ? "correct" : "incorrect";
+//         /**Score is incremented */
+//         if (classToApply === 'incorrect') {
+//             /**iterate questions until MAX_SCORE is met. (5)*/
+//             badScore(MAX_SCORE);
+//             console.log("correct/incorrect zone");
+//             incorrectImageScore();
+//         }
+//         selectedC.parentElement.classList.add(classToApply);
+//         /**Time to show the correct selection and then iterate next question*/
+//         setTimeout(() => {
+//             selectedC.parentElement.classList.remove(classToApply);
+//             getNextQuestion();
+//             console.log("time out");
+//         }, 1000)
+//     })
+
+// })
+
 choices.forEach(choice => {
     choice.addEventListener("click", e => {
         // if (!checkAnswer) return
         /**check user answer acgainst javascript answer */
-        checkAnswer = false;
+        checkA = false;
         let selectedC = e.target;
         let selectedA = selectedC.dataset["number"];
         let classToApply = selectedA == actualQuestion.answers ? "correct" : "incorrect";
@@ -162,15 +185,14 @@ choices.forEach(choice => {
             console.log("correct/incorrect zone");
             incorrectImageScore();
         }
-        selectedC.parentElement.classList.add(classToApply);
+        selectedChoice.parentElement.classList.add(classToApply);
         /**Time to show the correct selection and then iterate next question*/
         setTimeout(() => {
-            selectedC.parentElement.classList.remove(classToApply);
+            selectedChoice.parentElement.classList.remove(classToApply);
             getNextQuestion();
             console.log("time out");
         }, 1000)
     })
-
 })
 
 
