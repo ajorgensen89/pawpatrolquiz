@@ -1,10 +1,4 @@
 console.log("Fudge");
-// let username;
-
-// document.getElementById("submitButton").onclick = function(){
-//     username = document.getElementById("userText").value;
-//     console.log(username);
-// }
 
 /** Fixed score and question total value */
 const MAX_SCORE = 1;
@@ -113,7 +107,7 @@ startGame = () => {
     /**Spread operator to get any values from numberOfQuestions */
     otherQuestions = [...numberOfQuestions];
     getNextQuestion();
-    console.log("start game")
+    console.log("start game");
 }
 /**To get new question function*/
 getNextQuestion = () => {
@@ -123,7 +117,7 @@ getNextQuestion = () => {
         /**Go to this html page */
         console.log("get next qu");
         return window.location.assign("quiz.html");
-    }
+    };
     /**Question counter  */
     questionCount++;
     progressName.textContent = `Question ${questionCount} of ${MAX_QUESTIONS}`;
@@ -141,7 +135,7 @@ getNextQuestion = () => {
     otherQuestions.splice(questionId, 1);
 
     checkAnswer = true;
-}
+};
 
 /**click event for correct scores */
 choices.forEach(choice => {
@@ -170,9 +164,9 @@ choices.forEach(choice => {
             selectedChoice.parentElement.classList.remove(classToApply);
             getNextQuestion();
             console.log("time out");
-        }, 1000)
-    })
-})
+        }, 1000);
+    });
+});
 /**click event for incorrect scores */
 
 
@@ -181,13 +175,13 @@ incrementScore = num => {
     score += num;
     scoreTotal.textContent = score;
     console.log("increase score durring quiz");
-}
+};
 /**increaes wrong score when incorrect answer is selected */
 badScore = num => {
     wrong += num;
     wrongScore.textContent = wrong;
     console.log("wrong increased!!");
-}
+};
 /**Call start quiz function */
 startGame();
 
@@ -206,9 +200,9 @@ function correctImageScore() {
     if (score) {
         imageBlock1.appendChild(img);
         console.log("image1")
-    }
+    };
     console.log("6");
-}
+};
 
 /** Function to show image for incorrect score. Credit to MoonBooks.org in README.md */
 function incorrectImageScore() {
@@ -220,47 +214,6 @@ function incorrectImageScore() {
         imageBlock2.appendChild(img);
         console.log("image2");
 
-    }
+    };
     console.log("7");
-}
-
-
-
-// let highScores = JSON.parse(localStorage.getItem("#end-score")) || [];
-
-
-/**update score for viewing in Your score: */
-// const MAX_HIGH_SCORES = 5;
-
-// username.addEventListener("keyup", () => {
-//     endScoreButton.disabled = !username.value;
-//     console.log("1");
-
-// });
-// saveHighScore = e => {
-//     e.preventDefault();
-
-//     let score = {
-//         score: previousScore,
-//         name: username.value
-
-//     };
-//     console.log("2");
-//     highScores.push(score);
-
-//     highScores.sort((a, b) => {
-//         return b.score - a.score
-//     });
-//     highScores.splice(5);
-//     console.log("3");
-//     localStorage.setItem("highScores", JSON.stringify(highScores));
-//     window.location.assign("quiz.html");
-//     console.log("4");
-// }
-
-// let highScoresList = dpcument.querySelector("#highScoresList");
-// let highScore = JSON.parse(localStorage.getItem("highscores")) || [];
-
-// highScoresList.textContent = highScore.map(score => {
-//     return `<li>${score.name} : ${score.score}</li>`
-// }).join("");
+};
