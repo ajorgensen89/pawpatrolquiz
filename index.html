@@ -24,6 +24,7 @@
    <header>
         <div>
             <a href="index.html"><i class="fa-solid fa-igloo"></i></a>
+            <span id="igloo">Click here on Everests Igloo to return to this page at any point!</span>
         </div>
     </header>
         <div class="quiz-field">
@@ -34,11 +35,10 @@
             <div>
                 <label><h2>Create username:</h2></label>
 
-                <input type="text" id="userText" placeholder="name" class="newbie"><br>
+                <input type="text" id="userText" placeholder="name" class="newbie" required><br>
 
                 <label id="usernameLabel"></label><br>
             </div>
-            <br>
             <button type="button" id="submitButton" class="button-normal button-hover"><h3>Submit</h3></button>
 
 
@@ -55,17 +55,7 @@
         </div>
 
     </div>
-    <script src="assets/js/username/username.js"> 
-         
-        // let username;
-
-        // document.getElementById("submitButton").onclick = function () {
-        //     username = document.getElementById("userText").value;
-        //     console.log(username);
-        //     document.getElementById("usernameLabel").textContent = username +
-        //         "!! Welcome!! You are ready to play? Click on 'Start Game'!!";
-        // };
-    </script>
+    <script src="assets/js/username/username.js"></script>
     <!--javascript link-->
     <script src="assets/js/script.js"></script>
     <!--font awesome script-->

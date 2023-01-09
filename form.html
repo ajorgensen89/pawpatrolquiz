@@ -49,25 +49,38 @@
 </head>
 
 <body>
-    <div>
-        <a href="index.html"><i class="fa-solid fa-igloo"></i></a>
-    </div>
+    <header>
+        <div>
+            <a href="index.html"><i class="fa-solid fa-igloo"></i></a>
+        </div>
+    </header>
     <form id="contact-form">
+
         <input type="hidden" name="contact_number">
-        <label>Name</label>
-        <input type="text" name="username" required>
-        <label>Email</label>
-        <input type="email" name="useremail" required>
-        <label>Message</label>
-        <input name="message" required>
-        <input type="submit" value="Send" class="button-normal button-hover">
+        <div>
+            <label>Name:</label>
+            <input type="text" name="username" placeholder="name" class="newbie" required>
+        </div>
+        <div>
+            <label>Email:</label>
+            <input type="email" name="useremail" placeholder="email (use parents with permission)" class="newbie" required>
+        </div>
+        <div>
+            <label>Message:</label>
+       
+            <input name="message" placeholder="Any suggestions?" class="newbie" required>
+        </div>
+    <p>
+            <input type="submit" value="Send" class="button-normal button-hover">
+        </p>
     </form>
     <div>
-        <a href="index.html">
+        <p><a href="index.html">
             <button type="button" class="button-normal button-hover">
                 <h2>Play Again</h2>
             </button>
         </a>
+    </p>
     </div>
 
     <!--script links to font awesome and javascript-->
