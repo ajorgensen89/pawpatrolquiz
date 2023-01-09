@@ -1,5 +1,3 @@
-console.log("Fudge");
-
 /** Fixed score and question total value */
 const MAX_SCORE = 1;
 const MAX_QUESTIONS = 10;
@@ -10,17 +8,24 @@ let choices = Array.from(document.querySelectorAll(".choice-box"));
 let progressName = document.querySelector("#progress-name");
 let scoreTotal = document.querySelector('#score');
 let wrongScore = document.querySelector("#wrong");
+let endScore = document.querySelector("#end-score");
+
+/**To store previous score for user at the top of the page if they choose to try the quiz again */
+let previousScore = localStorage.getItem("previousScore");
 
 /** variable created to iterate through quiz array of numberOfQuestions */
 let actualQuestion = {};
+let otherQuestions = [];
+/**Setting 0 value for variables to start */
 let score = 0;
 let wrong = 0;
 let questionCount = 0;
-let otherQuestions = [];
+
 
 /**remove default false start to checking the quiz answer */
 let checkAnswer = true;
 
+/** Iterating Questions. All with 3 choices and the answer(read by data-number 1,2 or 3 in HTML) */
 let numberOfQuestions = [{
         question: "What is naughty Majors name in Paw Patrol who causes problems for the Paw Patrol gang?",
         choice1: "Major Goodway",
@@ -100,8 +105,11 @@ let numberOfQuestions = [{
         answers: 1,
     },
 ];
+
+/*Credit to https://www.youtube.com/watch?v=f4fB9Xg2JEY&t=2996s included in README.md*/
 /**Start the quiz function*/
 let startGame;
+
 startGame = () => {
     questionCount = 0;
     score = 0;
@@ -110,8 +118,10 @@ startGame = () => {
     getNextQuestion();
     console.log("start game");
 };
+
 /**To get new question function*/
 let getNextQuestion;
+
 getNextQuestion = () => {
     if (otherQuestions.length === 0 || questionCount >= MAX_QUESTIONS) {
         /**Track score. Add +1 to score for each correct answer*/
@@ -124,26 +134,29 @@ getNextQuestion = () => {
     questionCount++;
     progressName.textContent = `Question ${questionCount} of ${MAX_QUESTIONS}`;
     console.log("questionCount area");
-    /**Track the question the user is currently on and create quesion index*/
+    /**Track the question the user is currently on and create quesion index for iterating*/
     let questionId = Math.floor(Math.random() * otherQuestions.length);
     actualQuestion = otherQuestions[questionId];
     question.textContent = actualQuestion.question;
-
+/**Parameter to set data-type(number), from HTML sections that hold the choices*/
     choices.forEach(choice => {
         let number = choice.dataset["number"];
         choice.textContent = actualQuestion["choice" + number];
         console.log("choices");
     });
+    /**Enter new */
     otherQuestions.splice(questionId, 1);
 
     checkAnswer = true;
 };
+/**Change text content to equal new value */
+endScore.textContent = previousScore;
 
 /**click event for correct scores */
 choices.forEach(choice => {
     choice.addEventListener("click", e => {
         if (!checkAnswer) return
-        /**check user answer against javascript answer */
+        /**Check user answer against javascript quiz array answer */
         checkAnswer = false;
         let selectedChoice = e.target;
         let selectedAnswer = selectedChoice.dataset["number"];
@@ -155,6 +168,7 @@ choices.forEach(choice => {
             console.log("correct zone");
             correctImageScore();
         }
+        /**Incorrect score is incremented */
         if (classToApply === 'incorrect') {
             badScore(MAX_SCORE);
             incorrectImageScore();
@@ -166,11 +180,10 @@ choices.forEach(choice => {
             selectedChoice.parentElement.classList.remove(classToApply);
             getNextQuestion();
             console.log("time out");
+            /**Set time count */
         }, 1000);
     });
 });
-/**click event for incorrect scores */
-
 
 /**increases score of quiz when correct answer is selected */
 let incrementScore;
@@ -179,6 +192,7 @@ incrementScore = num => {
     scoreTotal.textContent = score;
     console.log("increase score durring quiz");
 };
+
 /**increaes wrong score when incorrect answer is selected */
 let badScore;
 badScore = num => {
@@ -186,21 +200,17 @@ badScore = num => {
     wrongScore.textContent = wrong;
     console.log("wrong increased!!");
 };
+
 /**Call start quiz function */
 startGame();
 
-// let username = document.querySelector("#username");
-// let endScoreButton = document.querySelector("#end-score-button");
-let endScore = document.querySelector("#end-score");
-let previousScore = localStorage.getItem("previousScore");
-endScore.textContent = previousScore;
-
-/** Function to show image for correct score. Credit to MoonBooks.org in README.md */
+/** Function to show image for correct score. Credit to www.moonbooks.org in README.md */
 function correctImageScore() {
-
+/**Getting image from source */
     let img = document.createElement("img");
     img.src = "./assets/images/quiz-images/yesPupCP.png";
     let imageBlock1 = document.getElementById("yes-pup");
+    /**If statment for correct image used */
     if (score) {
         imageBlock1.appendChild(img);
         console.log("image1");
@@ -208,16 +218,16 @@ function correctImageScore() {
     console.log("6");
 }
 
-/** Function to show image for incorrect score. Credit to MoonBooks.org in README.md */
+/** Function to show image for incorrect score. Credit to www.moonbooks.org in README.md */
 function incorrectImageScore() {
-
+/**Getting image from source */
     let img = document.createElement("img");
     img.src = "./assets/images/quiz-images/NoPupCP.png";
     let imageBlock2 = document.getElementById("no-pup");
+     /**If statment for correct image used */
     if (wrong) {
         imageBlock2.appendChild(img);
         console.log("image2");
-
     }
     console.log("7");
 }

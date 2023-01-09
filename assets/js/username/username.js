@@ -1,3 +1,5 @@
+/** Credit to https://www.youtube.com/watch?v=fARJwGqdbKQ See README.md for credit**/
+/**Create a username */
 let username;
 
 document.getElementById("submitButton").onclick = function () {

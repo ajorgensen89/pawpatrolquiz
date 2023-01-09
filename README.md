@@ -1,5 +1,3 @@
-credit [PRAROZ] https://www.bing.com/videos/search?q=javascript+tutorial+video+for+a+pub+quiz&&view=detail&mid=422F3547D1EE31B99D3A422F3547D1EE31B99D3A&&FORM=VRDGAR&ru=%2Fvideos%2Fsearch%3Fq%3Djavascript%2520tutorial%2520video%2520for%2520a%2520pub%2520quiz%26%26FORM%3DVDVVXX
-
 Assistance from Javascript Tutorial for storing Username while using browser.
 
 Error Debug.
@@ -88,7 +86,14 @@ On the final page, when a suggestion has been submitted on the **form**, the use
 In the top left corner, a [Font Awesome](https://fontawesome.com/) **Icon** can be used to link back to the Home Page.
 ***
 ## Future features
-A quiz based game on a wesbite can hold many different features
+There are a number of features to add to a Pub Quiz game. Named in this section are a few future features this wesbite would of benefitted from to make the user experience better.<br>
+A _highscore_ page showing the username and score the user obtained.<br>
+A _timer_ counter for each question so the user had a time limit per question. Luckily this is aimed for children, so at least no timer gives them plenty of time.<br>
+The incrementing question number (1 of 10, 2 0f 10, 3 of 10, untill 10 of 10), could of been portrayed in a _pie chart_ or a _progress bar_, slowly filling.<br>
+Even though the quiz offers an array of 60 questions, having _easy, medium and hard levels_ would of given the user a better experience of difficulty.<br>
+For the incorrect and correct image scores, _different images_ could have been used for each time a _right or wrong score_ was gained.<br>
+_Picture questions_, aswell as, text questions could have be introduced. For the answers, the user could of picked from _images_ to select the choices of an answer.
+
 ***
 # [Testing](testing.md)
 
@@ -100,6 +105,14 @@ A quiz based game on a wesbite can hold many different features
 
 ***
 ### Typography
+Text font was choosen from [Google Fonts](https://fonts.google.com/)
+* Gloria Hallelujah
+* Luckiest Guy
+<br>
+The **Luckiest Guy** font has been used to make the _placeholder_ text start out in the input sections.<br>
+**Gloria Hallelujah** font has been used through-out the website as the main font. It portrays a joyful, scribbly childish style of writing to the site without looking to serious.
+The contrast of the larger, uppercase **Luckiest Guy** Font in the input fields, make them stand out and seem important to the user.
+
 
 ***
 # Clone Website
@@ -109,13 +122,18 @@ A quiz based game on a wesbite can hold many different features
 
 ***
 # Technologies.
-* [Favicon Icon](https://www.favicon-generator.org/)<br>
+* [Favicon Icon](https://www.favicon-generator.org/)
 One of the characters in Paw Patrol is Everest. I used her colours throughout the website and for the favicon icon on the website after using the generator on the picture file. 
 * [Python Tutor](https://pythontutor.com/visualize.html#mode=edit) for assiting with viewing my javascript when building code.
 * Icons from [Font Awesome](https://fontawesome.com/)
 * Wireframe from [Balsamiq](https://balsamiq.com/)
-* [Email JS](https://www.emailjs.com/)<br>
-Used as a front-end server to create a email service to 'GET' suggestions to be sent to my email for responses from my Paw Patrol Quiz website.
+* [Email JS](https://www.emailjs.com/) Used as a front-end server to create a email service to 'GET' suggestions to be sent to my email for responses from my Paw Patrol Quiz website.
+* [JSHint](https://jshint.com/)
+* [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+* [HTML Validator W3](https://validator.w3.org/)
+* [Google Fonts](https://fonts.google.com/)
+* []()
+
 ***
 ### Credits
 
@@ -125,27 +143,12 @@ Used as a front-end server to create a email service to 'GET' suggestions to be 
 * [Favicon Icon](https://www.favicon-generator.org/) generator wesbite
 * Favicon [image](https://www.bing.com/images/search?view=detailV2&ccid=%2BJyjEgf8&id=1C9235A2E43F8DACE3ABFA5ECA46B0C6EA59D9CF&thid=OIP.-JyjEgf8_qN5SGjxre2cngHaIB&mediaurl=https%3A%2F%2Fwww.vippng.com%2Fpng%2Fdetail%2F223-2230436_stickerbygoodcat30-everest-pawpatrol-everestpawpatrol-paw-patrol-everest.png&exph=996&expw=920&q=everest+paw+patrol&simid=608045310985327084&form=IRPRST&ck=D75FA36506DA9C1F967833C435131981&selectedindex=5&ajaxhist=0&ajaxserp=0&vt=0&sim=11&cdnurl=https%3A%2F%2Fth.bing.
 com%2Fth%2Fid%2FR.f89ca31207fcfea3794868f1aded9c9e%3Frik%3Dz9lZ6sawRspe%252bg%26pid%3DImgRaw%26r%3D0) source
-* [Moonbooks](https://www.moonbooks.org/Articles/How-to-add-an-image-in-a-HTML-page-using-javascript-/#:~:text=How%20to%20add%20an%20image%20in%20a%20HTML,do%20you%20insert%20an%20image%20in%20Javascript%3F%20) for code regarding adding images to correct and incorrect scores.
+* [Moonbooks](https://www.moonbooks.org/Articles/How-to-add-an-image-in-a-HTML-page-using-javascript-/#:~:text=How%20to%20add%20an%20image%20in%20a%20HTML,do%20you%20insert%20an%20image%20in%20Javascript%3F%20) regarding adding images to JavaScript.
 * [geekforgeeks](https://www.geeksforgeeks.org/how-to-create-a-simple-javascript-quiz/) to help create my links to certain indexs in my numberOfQuestions array for the quiz.
 * [Python Tutor](https://pythontutor.com/visualize.html#mode=edit) for assiting with viewing my javascript when building code.
-* [Pinterest](https://in.pinterest.com/pin/paw-patrol--414683078182219373/)
-* [Cartoon Goodies](https://cartoongoodies.com/png-images/paw-patrol-png-images/)
+* [Pinterest](https://in.pinterest.com/pin/paw-patrol--414683078182219373/) for images.
+* [Cartoon Goodies](https://cartoongoodies.com/png-images/paw-patrol-png-images/) for images.
 * [Email JS](https://www.emailjs.com/)
-
-help with quiz
-https://www.geeksforgeeks.org/how-to-create-a-simple-javascript-quiz/
-
-Assist with loops anf functions
-https://pythontutor.com/visualize.html#mode=edit
-
-Code used for inputing Images to javascript and HTML.
-https://www.moonbooks.org/Articles/How-to-add-an-image-in-a-HTML-page-using-javascript-/#:~:text=How%20to%20add%20an%20image%20in%20a%20HTML,do%20you%20insert%20an%20image%20in%20Javascript%3F%20
-
-
-Sad Everest picture for incorrect score
-https://in.pinterest.com/pin/paw-patrol--414683078182219373/
-
-Happy Everest Puppy picture for correct score
-https://cartoongoodies.com/png-images/paw-patrol-png-images/
-
-w3schools.
+* [Youtubers](https://www.youtube.com/watch?v=f4fB9Xg2JEY&t=2996s) guide for quiz.
+* [Youtubers](https://www.youtube.com/watch?v=fARJwGqdbKQ) guide for username.
+***
