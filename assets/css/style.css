@@ -21,7 +21,8 @@ header {
 #igloo {
     float: left;
     font-size: 15px;
-    color: rgb(10, 184, 129)
+    color: rgb(10, 184, 129);
+    font-weight: bolder;
 }
 
 .header-title-quiz {
