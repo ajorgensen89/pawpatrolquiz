@@ -54,6 +54,7 @@ See the [Wireframe](#wireframe) for explanation of the layout of the website. Th
 ***
 
 [Back to Top](#Paw-Patrol-Kids-Quiz)
+
 ## Wireframe
 To compile the wireframe, [Balsamiq](https://balsamiq.com/) was used and is shown in the images below for this section.
 ### Welcome page to start of quiz
