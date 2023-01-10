@@ -9,6 +9,7 @@ p {
     font-size: 20px;
     font-weight: bold;
 }
+
 /*Header with icon to homepage. (small explation on homepage for its use and again, in rules)*/
 header {
     color: rgb(29, 7, 51);
@@ -20,6 +21,7 @@ header {
 #igloo {
     float: left;
     font-size: 15px;
+    color: rgb(10, 184, 129)
 }
 
 .header-title-quiz {
@@ -136,11 +138,11 @@ label {
 
 /*correct and incorrect classes used in javascript to identify if the answer picked is right or wrong*/
 .correct {
-    background-color: rgb(7, 149, 54);
+    background-color: rgb(10, 184, 129);
 }
 
 .incorrect {
-    background-color: rgb(197, 6, 41);
+    background-color: rgb(198, 5, 5);
 }
 
 /*Size to image for correct and incorrect answer (viewed during quiz)*/
@@ -182,6 +184,7 @@ li {
 footer {
     height: 200px;
 }
+
 /*Quiz questions and answers style*/
 #progress-name {
     font-size: larger;

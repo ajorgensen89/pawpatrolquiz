@@ -29,7 +29,11 @@ Littles pops of colour taken from the character called Everest, can be seen thro
 ![Am I responsive photo](assets/images/readme-images/Responsive.png)
 
 ### Colour Scheme
-
+The colours for thie wesbite our based on the character Everest from Paw Patrol. She is one of the main Puppies in the Paw Patrol that help people. She has purple fur and green and orange clothes.
+![The character Everest](assets/images/quiz-images/yesPupCP.png)<br>
+- ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) `#f03c15`
+- ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+) `#c5f015`
+- ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) `#1589F0`
 
 ### Typography
 Text font was choosen from [Google Fonts](https://fonts.google.com/)
