@@ -29,11 +29,16 @@ Littles pops of colour taken from the character called Everest, can be seen thro
 ![Am I responsive photo](assets/images/readme-images/Responsive.png)
 
 ### Colour Scheme
-The colours for thie wesbite our based on the character Everest from Paw Patrol. She is one of the main Puppies in the Paw Patrol that help people. She has purple fur and green and orange clothes.
+The colours for thie wesbite our based on the character Everest from Paw Patrol. She is one of the main Puppies in the Paw Patrol that help people. She has purple fur and green and orange clothes. [Chrome Developer Tools](https://developer.chrome.com/docs/devtools/) can be access from a link or directly through the **Inspect** option when you right click on any website.<br>
+**Everest Character**
+Colours based on her clothing.<br>
 ![The character Everest](assets/images/quiz-images/yesPupCP.png)<br>
-- ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) `#f03c15`
-- ![#c5f015](https://via.placeholder.com/15/c5f015/000000?text=+) `#c5f015`
-- ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=+) `#1589F0`
+**Colour Chart**
+This was created by using [Chrome Developer Tools](https://developer.chrome.com/docs/devtools/) to view the colours used.<br>
+![Colour Chart](assets/images/readme-images/Colours.png)<br>
+**Check Chart**
+Another one, is checking if any CSS classes have been created but not used. Also it can give an overview of the media queries.<br>
+![Media and css checks](assets/images/readme-images/MediaandCheck.png)
 
 ### Typography
 Text font was choosen from [Google Fonts](https://fonts.google.com/)
