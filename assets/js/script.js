@@ -69,7 +69,7 @@ let numberOfQuestions = [{
         answers: 3,
     },
     {
-        question: "?",
+        question: "What is the name of the boy who put together the Mini-Patrol?",
         choice1: "Rex",
         choice2: "Alex",
         choice3: "Andy",
