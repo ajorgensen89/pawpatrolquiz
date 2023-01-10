@@ -34,9 +34,10 @@ footer {
 }
 
 /*Set basic style for paragraphs*/
-p {
+a {
     margin: 10px 0;
     font-size: 20px;
+    text-decoration: none;
 }
 
 /*Set basic style for icons*/
@@ -281,7 +282,8 @@ hr {
         font-size: 8px;
     }
 
-    p {
+    a {
+        font-size: 10px;
         margin: 10px 0;
     }
 
