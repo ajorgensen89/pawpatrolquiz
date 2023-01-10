@@ -17,7 +17,7 @@
     <link rel="back-form page" href="back-form.html">
     <link rel="form page" href="form.html">
     <link rel="rules page" href="rules.html">
-      
+
     <title>Paw Patrol Quiz</title>
 </head>
 
@@ -32,51 +32,55 @@
     </header>
     <div>
         <!--Increments and shows the question the user is on up to 10 of 10-->
-        <h4 id="progress-name"></h4>
+        <h2 id="progress-name"></h2>
         <div class="hold-left">
             <!--Image holder for correct score-->
             <span id="yes-pup" class="img-pup"></span><br>
             <!--Correct score counter-->
-            <span>Score</span>
+            <span class="text-bold">Score</span>
             <span id="score">0</span>
         </div>
         <div class="hold-right">
             <!--Image holder for incorrect score-->
             <span id="no-pup" class="img-pup"></span><br>
             <!--Incorrect score counter-->
-            <span>Incorrect Answers:</span>
+            <span class="text-bold">Incorrect Answers:</span>
             <span id="wrong">0</span>
         </div>
     </div>
-    <div class="quiz-field">
+    <hr>
+    <div>
         <div id="question">
 
         </div>
         <div>
             <!--Answer choices from javscript are placed in these sections and given a data-number for linking-->
-            <span>1:</span>
+            <span class="text-bold">1.</span>
             <span class="choice-box" data-number="1"></span>
 
         </div>
         <div>
-            <span>2:</span>
+            <span class="text-bold">2.</span>
             <span class="choice-box" data-number="2"></span>
         </div>
         <div>
-            <span>3:</span>
+            <span class="text-bold">3.</span>
             <span class="choice-box" data-number="3"></span>
         </div>
+        <hr>
         <div>
             <!--Holds the user's previous score here while trying the quiz again-->
-            <strong>
-                <p>Previous Score:
-                    <p id="end-score">0</p>
-                </p>
+            <strong><em>
+                    <p><h3>Previous Score:</h3>
+                        <p id="end-score">0</p>
+                    </p>
+                </em>
             </strong>
         </div>
-      
-    </div>
 
+    </div>
+    <footer><img id="logo-image" alt="Image of Paw Patrol puppy Character Everest looking happy"
+            src="assets/images/quiz-images/Footer.jpg"></footer>
     <!--javascript link-->
     <script src="assets/js/script.js"></script>
     <!--font awesome script-->
