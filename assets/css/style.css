@@ -120,7 +120,7 @@ label {
 
 /*correct and incorrect classes used in javascript to identify if the answer picked is right or wrong*/
 .correct {
-    background-color: rgb(10, 164, 61);
+    background-color: rgb(7, 149, 54);
 }
 
 .incorrect {
