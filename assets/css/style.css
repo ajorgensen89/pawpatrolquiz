@@ -18,6 +18,11 @@ header {
     font-size: 10px;
 }
 
+.header-title-quiz {
+ float: right;
+ font-weight: bolder;
+}
+
 /*Set basic style for paragraphs*/
 p {
     margin: 30px 0;
@@ -32,22 +37,10 @@ i {
 
 /*Set basic style for icons when hovered over*/
 i:hover {
-    color: rgb(165, 9, 231);
+    color: rgb(10, 184, 129);
     transition: transform 150ms;
     transform: scale(1.1);
 }
-
-/* .quiz-field {
-    background-image: url(../images/quiz-images/quiz-field.jpg);
-    background-color: aqua;
-    text-align: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 50%;
-    height: 400px;
-    
-} */
 
 /*username before hover*/
 .newbie {
@@ -121,7 +114,6 @@ label {
 /*correct and incorrect classes used in javascript to identify if the answer picked is right or wrong*/
 .correct {
     background-color: rgb(10, 164, 61);
-
 }
 
 .incorrect {
@@ -162,6 +154,12 @@ li {
         width: 60px;
         height: 75px;
     }
+}
+
+@media screen and (max-width: 540px) {
+   .header-title-quiz {
+    font-size: 10px;
+   }
 }
 
 @media screen and (max-width: 436px) {
