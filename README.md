@@ -1,4 +1,7 @@
 # Paw Patrol Kids Quiz
+
+Active Link: https://ajorgensen89.github.io/pawpatrolquiz 
+
 ![Logo](assets/images/quiz-images/pawlogosmall.png)
 
 The purpose of this website is to design a Quiz using Javascript as the object based computer programmers language, commonly used to create interactive effects within web browsers. The Quiz website has been aimed at children about the topic of `Paw Patrol`. However, anyone can enjoy the quiz if they would like too. A little bit of knowledge around the topic will help with getting a higher score.
@@ -53,7 +56,7 @@ The contrast of the larger, uppercase **Luckiest Guy** Font in the input fields,
 See the [Wireframe](#wireframe) for explanation of the layout of the website. This includes, _homepage_, _rules_ page, _quiz_ itself and _form_ page for suggestion submission.
 ***
 
-[Back to Top](#Paw-Patrol-Kids-Quiz)
+[Back to Top](#paw-patrol-kids-quiz)
 
 ## Wireframe
 To compile the wireframe, [Balsamiq](https://balsamiq.com/) was used and is shown in the images below for this section.
@@ -79,7 +82,7 @@ This page was used to ensure when the user enters details to be submitted, they 
 
 ![wireframe image 4](assets/images/readme-images/wireframe4.png)
 
-[Back to Top](#Paw-Patrol-Kids-Quiz)
+[Back to Top](#paw-patrol-kids-quiz)
 ***
 # Features
 The features and pages created in the final Pub Quiz game for a `Paw Patrol Quiz` are quite different to the original [wireframe from Balsamiq](https://balsamiq.com/) design that can be seen in the [User Experience](#user-experience) section.<br>
@@ -129,7 +132,7 @@ The last feature is the [Favicon Icon](https://www.favicongenerator.com/) which 
 ![Favicon Icon](favicon.ico) <br>
 Here is an image of the browser tab. <br>
 ![Favicon Icon in browser Tab](assets/images/readme-images/favicontab.png)<br>
-[Back to Top](#Paw-Patrol-Kids-Quiz)
+[Back to Top](#paw-patrol-kids-quiz)
 ***
 ## Future features
 There are a number of features to add to a Pub Quiz game. Named in this section are a few future features this wesbite would of benefitted from to make the user experience better.<br>
@@ -145,7 +148,7 @@ The buttons for clicking on the answers could of been more defined<br>
 # Clone Website
 <br>
 
-[Back to Top](#Paw-Patrol-Kids-Quiz)
+[Back to Top](#paw-patrol-kids-quiz)
 
 ***
 # Deployment
@@ -173,9 +176,9 @@ The process involved signing into GitHub pages and opening the repository.
 - Click 'View Deployment'
 
 
-Active link: 
+Active link: https://ajorgensen89.github.io/pawpatrolquiz 
 
-[Back to Top](#Paw-Patrol-Kids-Quiz)
+[Back to Top](#paw-patrol-kids-quiz)
 ***
 ## Clone Website.
 The process of cloning the website can be seen below.
@@ -192,7 +195,7 @@ Hit _enter_.
 ![Clone step 3](assets/images/readme-images/git2.png)
 
 
-[Back to Top](#Paw-Patrol-Kids-Quiz)
+[Back to Top](#paw-patrol-kids-quiz)
 ***
 # Technologies.
 * [Favicon Icon](https://www.favicongenerator.com/)
@@ -208,7 +211,7 @@ One of the characters in `Paw Patrol` is `Everest`. I used her colours throughou
 * [Chrome Developer Tools](https://developer.chrome.com/docs/devtools/)
 <br>
 
-[Back to Top](#Paw-Patrol-Kids-Quiz)
+[Back to Top](#paw-patrol-kids-quiz)
 ***
 ### Credits
 
@@ -229,6 +232,6 @@ com%2Fth%2Fid%2FR.f89ca31207fcfea3794868f1aded9c9e%3Frik%3Dz9lZ6sawRspe%252bg%26
 ***
 <br>
 
-[Back to Top](#Paw-Patrol-Kids-Quiz)
+[Back to Top](#paw-patrol-kids-quiz)
 ***
 ***

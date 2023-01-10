@@ -188,18 +188,22 @@ footer {
 
 /*Quiz questions and answers style*/
 #progress-name {
-    font-size: larger;
+    font-size: 30px;
     margin: 0;
 }
 
 .text-bold {
-    font-size: larger;
+    font-size: 30px;
 }
 
 #question {
     font-weight: bold;
     color: rgb(224, 80, 2);
-    font-size: large;
+    font-size: 30px;
+}
+.choice-box {
+    font-weight: bold;
+    font-size: 20px;
 }
 
 hr {
@@ -298,6 +302,9 @@ hr {
 
     #send-margin {
         padding: 10px;
+    }
+    #question {
+        font-size: 20px;
     }
 }
 
