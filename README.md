@@ -16,7 +16,6 @@ HTML, CSS and JavaScript have been used together for this project to produce a m
 	- [Typography](#typography)
 * [Features](#features)
 * [Testing](testing.md)
-
 * [Clone Website](#clone-website)
 * [Deployment](#deployment)
 * [Technologies](#technologies)
@@ -24,9 +23,10 @@ HTML, CSS and JavaScript have been used together for this project to produce a m
 # User Experience
 This 'Pub quiz' style website uses questions about a childrens popular `Tv Series called 'Paw Patrol'`. They have a number of different series and a `Paw Patrol` movie too.<br>
 It is aimed for anyone who loves `Paw Patrol`. Kids and all those parents that get sucked into watching it too. The quiz contains 60 questions with three multiple choice questions(1:, 2:, 3:) for the user to select from. These questions are randomly iterated through JavsScript for the user. So, if they were to play again, the next 10 questions they face, should be different. This hopefully should be a fun way of testing the user's knowledge about the `Paw Patrol franchise`.<br>
-
+Littles pops of colour taken from the character called Everest, can be seen through-out the website. Along with images and a `Paw Patrol Logo`. This logo is displayed above and is the first thing the user will see what they start the quiz. Helping them know who it is about.
 # Design
-
+[Am I Responsive](https://ui.dev/amiresponsive?url=https://ajorgensen89.github.io/pawpatrolquiz/index.html) was used to see how the front page displays on different screens.<br>
+![Am I responsive photo](assets/images/readme-images/Responsive.png)
 
 ### Colour Scheme
 
@@ -105,8 +105,8 @@ A _timer_ counter for each question so the user had a time limit per question. L
 The incrementing question number (1 of 10, 2 0f 10, 3 of 10, untill 10 of 10), could of been portrayed in a _pie chart_ or a _progress bar_, slowly filling.<br>
 Even though the quiz offers an array of 60 questions, having _easy, medium and hard levels_ would of given the user a better experience of difficulty.<br>
 For the incorrect and correct image scores, _different images_ could have been used for each time a _right or wrong score_ was gained.<br>
-_Picture questions_, aswell as, text questions could have be introduced. For the answers, the user could of picked from _images_ to select the choices of an answer.
-
+_Picture questions_, aswell as, text questions could have be introduced. For the answers, the user could of picked from _images_ to select the choices of an answer.<br>
+_Background Images_ of the characters would of been a great way to style this websites _design features_ too. Bringing more colour to the site from a number of different characters rather than only one.<br>
 ***
 # [Testing](testing.md)
 

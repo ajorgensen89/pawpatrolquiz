@@ -19,16 +19,16 @@ footer {
 
 #igloo {
     float: left;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .header-title-quiz {
     float: right;
     font-weight: bolder;
-    font-size: 30px;
+    font-size: 25px;
 }
 
-/*Remove margin where necessary*/
+/*Adapt margin where necessary*/
 .margin-zero {
     margin: 0;
 }
@@ -36,6 +36,7 @@ footer {
 /*Set basic style for paragraphs*/
 p {
     margin: 10px 0;
+    font-size: 20px;
 }
 
 /*Set basic style for icons*/
