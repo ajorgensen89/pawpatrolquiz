@@ -1,13 +1,9 @@
-Assistance from Javascript Tutorial for storing Username while using browser.
-
-Error Debug.
-
-
 # Paw Patrol Kids Quiz.
+![Logo](assets/images/quiz-images/pawlogosmall.png)
 
 The purpose of this website is to design a Quiz using Javascript as the object based computer programmers language, commonly used to create interactive effects within web browsers. The Quiz website has been aimed at children about the topic of `Paw Patrol`. However, anyone can enjoy the quiz if they would like too. A little bit of knowledge around the topic will help with getting a higher score.
 <br>
-HTML, CSS and JavaScript has been used together for this project to produce a multiple questioned Quiz.
+HTML, CSS and JavaScript have been used together for this project to produce a multiple questioned Quiz.
 ***
 ***
 
@@ -15,19 +11,36 @@ HTML, CSS and JavaScript has been used together for this project to produce a mu
 
 * [User Experience](#user-experience)
 	- [Wireframe](#wireframe)
-* [Features](#features)
-* [Testing](testing.md)
-* [Design](#design)
+* [Design for User Experience](#design)
 	- [Colour Scheme](#colour-scheme)
 	- [Typography](#typography)
+* [Features](#features)
+* [Testing](testing.md)
+
 * [Clone Website](#clone-website)
 * [Deployment](#deployment)
 * [Technologies](#technologies)
 
 # User Experience
-This 'Pub quiz' style website uses questions about a children popular `Tv Series called 'Paw Patrol'`. They have a number of different series and a `Paw Patrol` movie too.<br>
-It is aimed for anyone who loves `Paw Patrol`. Kids and all those parents that get sucked into watching it too. The quiz contains 60 questions with three multiple choice questions(1:, 2:, 3:) for the user to select from. These question are randomly iterated through JavsScript for the user. So, if they were to play again, the next 10 questions they face, should be different. This hopefully should be a fun way of testing the user's knowledge about the `Paw Patrol franchise`.<br>
-ENTER COLOUR AND GENERAL INFO
+This 'Pub quiz' style website uses questions about a childrens popular `Tv Series called 'Paw Patrol'`. They have a number of different series and a `Paw Patrol` movie too.<br>
+It is aimed for anyone who loves `Paw Patrol`. Kids and all those parents that get sucked into watching it too. The quiz contains 60 questions with three multiple choice questions(1:, 2:, 3:) for the user to select from. These questions are randomly iterated through JavsScript for the user. So, if they were to play again, the next 10 questions they face, should be different. This hopefully should be a fun way of testing the user's knowledge about the `Paw Patrol franchise`.<br>
+
+# Design
+
+
+### Colour Scheme
+
+
+### Typography
+Text font was choosen from [Google Fonts](https://fonts.google.com/)
+* Gloria Hallelujah
+* Luckiest Guy
+<br>
+The **Luckiest Guy** font has been used to make the _placeholder_ text start out in the input sections.<br>
+**Gloria Hallelujah** font has been used through-out the website as the main font. It portrays a joyful, scribbly childish style of writing to the site without looking to serious.
+The contrast of the larger, uppercase **Luckiest Guy** Font in the input fields, make them stand out and seem important to the user.
+
+
 See the [Wireframe](#wireframe) for explanation of the layout of the website. This includes, _homepage_, _rules_ page, _quiz_ itself and _form_ page for suggestion submission.
 ***
 ## Wireframe (Balsamiq)
@@ -98,21 +111,6 @@ _Picture questions_, aswell as, text questions could have be introduced. For the
 # [Testing](testing.md)
 
 
-# Design
-
-***
-### Colour Scheme
-
-***
-### Typography
-Text font was choosen from [Google Fonts](https://fonts.google.com/)
-* Gloria Hallelujah
-* Luckiest Guy
-<br>
-The **Luckiest Guy** font has been used to make the _placeholder_ text start out in the input sections.<br>
-**Gloria Hallelujah** font has been used through-out the website as the main font. It portrays a joyful, scribbly childish style of writing to the site without looking to serious.
-The contrast of the larger, uppercase **Luckiest Guy** Font in the input fields, make them stand out and seem important to the user.
-
 
 ***
 # Clone Website
@@ -122,7 +120,7 @@ The contrast of the larger, uppercase **Luckiest Guy** Font in the input fields,
 
 ***
 # Technologies.
-* [Favicon Icon](https://www.favicon-generator.org/)
+* [Favicon Icon](https://www.favicongenerator.com/)
 One of the characters in Paw Patrol is Everest. I used her colours throughout the website and for the favicon icon on the website after using the generator on the picture file. 
 * [Python Tutor](https://pythontutor.com/visualize.html#mode=edit) for assiting with viewing my javascript when building code.
 * Icons from [Font Awesome](https://fontawesome.com/)
@@ -140,7 +138,7 @@ One of the characters in Paw Patrol is Everest. I used her colours throughout th
 * Fonts from [Google Fonts](https://fonts.google.com/)
 * Icons from [Font Awesome](https://fontawesome.com/)
 * Wireframe from [Balsamiq](https://balsamiq.com/)
-* [Favicon Icon](https://www.favicon-generator.org/) generator wesbite
+* [Favicon Icon](https://www.favicongenerator.com/) generator wesbite
 * Favicon [image](https://www.bing.com/images/search?view=detailV2&ccid=%2BJyjEgf8&id=1C9235A2E43F8DACE3ABFA5ECA46B0C6EA59D9CF&thid=OIP.-JyjEgf8_qN5SGjxre2cngHaIB&mediaurl=https%3A%2F%2Fwww.vippng.com%2Fpng%2Fdetail%2F223-2230436_stickerbygoodcat30-everest-pawpatrol-everestpawpatrol-paw-patrol-everest.png&exph=996&expw=920&q=everest+paw+patrol&simid=608045310985327084&form=IRPRST&ck=D75FA36506DA9C1F967833C435131981&selectedindex=5&ajaxhist=0&ajaxserp=0&vt=0&sim=11&cdnurl=https%3A%2F%2Fth.bing.
 com%2Fth%2Fid%2FR.f89ca31207fcfea3794868f1aded9c9e%3Frik%3Dz9lZ6sawRspe%252bg%26pid%3DImgRaw%26r%3D0) source
 * [Moonbooks](https://www.moonbooks.org/Articles/How-to-add-an-image-in-a-HTML-page-using-javascript-/#:~:text=How%20to%20add%20an%20image%20in%20a%20HTML,do%20you%20insert%20an%20image%20in%20Javascript%3F%20) regarding adding images to JavaScript.
